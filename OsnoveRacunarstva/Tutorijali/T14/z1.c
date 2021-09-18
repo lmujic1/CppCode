@@ -1,65 +1,59 @@
 /*
-U prethodnom programu dodajte funkciju samoglasnici koja će prebrojati broj samoglasnika u zadatoj riječi.
-Prototip funkcije samoglasnici je:
+Data je datoteka ispiti.txt čiji redovi imaju sljedeću strukturu:
 
-                                int samoglasnici(char *s);
+brindexa predmet ocjena
 
-Ova funkcija treba uzimati u obzir i velika i mala slova. Zatim pri kraju main() funkcije umetnite
-poziv funkcije samoglasnici tako da program na standardnom izlazu pored dužine riječi i broja pojavljivanja
-nekog znaka ispiše i broj samoglasnika u unesenoj riječi.
+gdje brindexa predstavlja broj indeksa studenta koji je polagao ispit, predmet je broj koji
+označava predmet iz kojeg je upisana ocjena, a ocjena je konačna ocjena koju je student osvojio. Na primjer:
 
-Primjer ulaza i izlaza sada treba biti:
-        Unesite jednu rijec do 80 znakova (ENTER za kraj):
-        Otorinolaringologija
-        Koji znak treba prebrojati: o
-        Broj znakova o je: 4
-        Broj samoglasnika je: 10
+12345 3 10
+12345 4 9
+12233 4 10
+13579 2 8
+13579 3 8
 
-U ovom primjeru kod broja znakova o nije ubrojano početno veliko slovo O jer
-funkcija prebroji koju smo dali iznad razlikuje velika i mala slova.
+Prvi red označava da je student sa brojem indexa 12345 iz predmeta broj 3 (npr. to mogu biti Osnove računarstva) dobio ocjenu 10 itd.
+Ako je isti student položio više predmeta, jednostavno se dodaje još jedan red sa istim brojem indexa, ali drugim predmetom.
+
+Kreirajte ovu datoteku i napunite je nekim testnim podacima. Zatim napravite program koji na ulazu traži broj predmeta, te ispisuje
+prosječnu ocjenu i prolaznost (procenat studenata koji su položili tj. dobili ocjenu 6 ili više) . Primjer ulaza i izlaza je:
+
+Unesite predmet: 4
+Prosječna ocjena: 7.23
+Prolaznost: 60%
+
 
 */
 #include <stdio.h>
+struct Ispit {
+    int brindexa,predmet,ocjena;
+};
 
-void unesi(char niz[], int velicina) {
-    char znak = getchar();
-    if (znak == '\n') znak=getchar();
-    int i = 0;
-    while (i < velicina-1 && znak != '\n') {
-        niz[i] = znak;
-        i++;
-        znak = getchar();
-    }
-    niz[i]='\0';
-}
-
-int prebroji(char* s, char znak) {
-    int broj = 0;
-    while (*s != '\0') {
-
-        if (*s == znak)
-            broj++;
-        s++;
-    }
-    return broj;
-}
-
-int samoglasnici(char *s) {
-    int brojac=0;
-    while(*s!='\0') {
-        if(*s=='a' || *s=='A' || *s=='e' || *s=='E' || *s=='i' || *s=='I' || *s=='o' || *s=='O' || *s=='u' || *s=='U') brojac++;
-        s++;
-    }
-    return brojac;
-}
 
 int main() {
-    char a[80],c;
-    printf ("\nUnesite jednu rijec do 80 znakova (ENTER za kraj):");
-    unesi(a, 80);
-    printf ("\nKoji znak treba prebrojati:");
-    scanf ("%c", &c);
-    printf ("\nBroj znakova %c je: %d\n",c,prebroji(a,c));
-    printf("Broj samoglasnika je: %d",samoglasnici(a));
+    int i=0,uneseni_predmet=0,polozen_predmet=0,predmet,suma=0;
+    double prosjek,prolaznost;
+    struct Ispit indexi[1000];
+    FILE *dat=fopen("ispiti.txt","a+");
+    if(dat==NULL) {
+        printf("Greska prilikom otvaranja datoteke ispiti.txt");
+        return 1;
+    }
+    printf("Unesite predmet: ");
+    scanf("%d",&predmet);
+    if(predmet>5) printf("Zalimo, ali ne postoje podaci o predmetu sa brojem %d!",predmet);
+    while(fscanf(dat,"%d %d %d",&indexi[i].brindexa,&indexi[i].predmet,&indexi[i].ocjena)==3) {
+        if(indexi[i].predmet==predmet) {
+            uneseni_predmet++;
+            suma+=indexi[i].ocjena;
+            if(indexi[i].ocjena>=6) polozen_predmet++;
+        }
+        i++;
+    }
+    fclose(dat);
+    prosjek=(double)suma/uneseni_predmet;
+    prolaznost=100-((uneseni_predmet-polozen_predmet)/(double)uneseni_predmet)*100;
+    printf("Prosjecna ocjena: %.2lf\nProlaznost: %g%%",prosjek,prolaznost);
+
     return 0;
 }

@@ -1,72 +1,100 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-    TP 16/17 (Tutorijal 11, Zadatak 2)
-	Autotestove napisao Haris Hasic. Sve primjedbe/zalbe, sugestije
-	i pitanja slati na mail: hhasic2@etf.unsa.ba.
+    TP 16/17 (Tutorijal 12, Zadatak 2)
+	Autotestove napisao Kerim Hodzic. Sve primjedbe/zalbe, sugestije
+	i pitanja slati na mail: khodzic2@etf.unsa.ba.
 
 	Vrsit ce se provjera na prepisivanje tutorijala (na kraju semestra)
 */
 #include <iostream>
-class StedniRacun {
-    static int aktivni;
-    static int kreirani;
-    double stanje_racuna;
-public:
-    /*StedniRacun() {
-        stanje_racuna=0;
-        aktivni++;
-        kreirani++;
-    }*/
-    StedniRacun(const StedniRacun &s) {
-        kreirani++;
-        aktivni++;
-        stanje_racuna=s.stanje_racuna;
+#include <set>
+#include <algorithm>
+#include <vector>
+#include <utility>
+template <typename Tip>
+std::set<Tip> operator *(std::set<Tip> s1, std::set<Tip> s2){
+    std::set<Tip> Noviskup;
+    for(auto x : s1) {
+        for(auto y : s2) {
+            if(std::count(s1.begin(), s1.end(), x) && std::count(s2.begin(), s2.end(), y) && x==y)
+                Noviskup.insert(x);
+        }
     }
-    ~StedniRacun () {
-        aktivni--;
+    return Noviskup;
+}
+template <typename Tip>
+std::set<Tip> operator +(std::set<Tip> s1, std::set<Tip> s2){
+    std::set<Tip> Noviskup;
+    for(auto x : s1) {
+        for (auto y :s2) {
+            if(std::count(s1.begin(), s1.end(), x) && std::count(s2.begin(), s2.end(), y))
+                Noviskup.insert(x);
+            Noviskup.insert(y);
+        }
     }
-    StedniRacun(double pocetna_vrijednost=0) {
-        if(pocetna_vrijednost<0) throw std::logic_error("Nedozvoljeno pocetno stanje");
-        stanje_racuna=pocetna_vrijednost;
-        kreirani++;
-        aktivni++;
+    return Noviskup;
+}
+template <typename Tip>
+std::ostream &operator <<(std::ostream &tok, std::set<Tip> s) {
+    int n(0);
+    tok<<"{";
+    for(auto x:s) {
+        if(n==s.size()-1) tok<<x;
+        else tok<<x<<",";
+        n++;
     }
-    StedniRacun &Ulozi(double n) {
-        if(stanje_racuna+n<0) throw std::logic_error("Transakcija odbijena");
-        stanje_racuna+=n;
-        return *this;
+    tok<<"}";
+    return tok;
+}
+template <typename Tip1, typename Tip2>
+std::set<std::pair<Tip1,Tip2>> operator %(const std::set<Tip1> &s1,const std::set<Tip2> &s2) {
+    std::set<std::pair<Tip1,Tip2>> dekartov_proizvod;
+    for(auto x:s1) {
+        for(auto y:s2) {
+            std::pair<Tip1,Tip2> par(std::make_pair(x,y));
+            dekartov_proizvod.insert(par);
+        }
     }
-    StedniRacun &Podigni(double n) {
-        if(n>stanje_racuna) throw std::logic_error("Transakcija odbijena");
-        stanje_racuna-=n;
-        return *this;
+    return dekartov_proizvod;
+}
+template <typename Tip1, typename Tip2>
+std::ostream &operator <<(std::ostream &tok, std::set<std::pair<Tip1,Tip2>> s) {
+    int n(0);
+    tok<<"{";
+    for(auto x:s) {
+        if(n==s.size()-1) tok<<"("<<x.first<<","<<x.second<<")";
+        else tok<<"("<<x.first<<","<<x.second<<"),";
+        n++;
     }
-    double DajStanje() const { return stanje_racuna; }
-    StedniRacun & ObracunajKamatu(double kamatna_stopa) {
-        if(kamatna_stopa<0) throw std::logic_error("Nedozvoljena kamatna stopa");
-        stanje_racuna+=((stanje_racuna*kamatna_stopa)/100);
-        return *this;
+    tok<<"}";
+    return tok;
+}
+template <typename Tip>
+std::set<Tip> operator *=(std::set<Tip> &s1, std::set<Tip> s2){
+    std::set<Tip> Noviskup;
+    for(auto x : s1) {
+        for(auto y : s2) {
+            if(std::count(s1.begin(), s1.end(), x) && std::count(s2.begin(), s2.end(), y) && x==y)
+                Noviskup.insert(x);
+        }
     }
-    static int DajBrojAktivnih() {
-        return aktivni;
+    s1=Noviskup;
+    return s1;
+}
+template <typename Tip>
+std::set<Tip> operator +=(std::set<Tip> &s1, std::set<Tip> s2){
+    std::set<Tip> Noviskup;
+    for(auto x : s1) {
+        for (auto y :s2) {
+            if(std::count(s1.begin(), s1.end(), x) && std::count(s2.begin(), s2.end(), y))
+                Noviskup.insert(x);
+            Noviskup.insert(y);
+        }
     }
-    static int DajBrojKreiranih() {
-        return kreirani;
-    }
-};
-int StedniRacun::aktivni=0;
-int StedniRacun::kreirani=0;
+    s1=Noviskup;
+    return s1;
+}
 int main ()
 {
-    try {
-        StedniRacun student=557;
-        std::cout<<student.DajStanje();
-        student.Ulozi(-656);
-    } catch (std::logic_error a) {
-        std::cout<<a.what()<<std::endl;
-    }
+
     return 0;
 }

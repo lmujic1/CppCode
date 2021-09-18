@@ -1,40 +1,29 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
-/*
 #include <stdio.h>
-#define PI 3.14
-
-int main()
-{
-    float R, P, V;
-
-    // Unos poluprecnika sa tastature i izracunavanje
-
-    printf (“\Unesite poluprecnik:”);
-    scanf (“%f”, &R);
-    P=(R*R)*PI;
-    V=(4/3)*R*R*R*PI;
-
-    // Ispis na monitoru
-    printf(“\n Povrsina kruga sa poluprecnikom %  2f je %.2f”, R,P);
-    printf(“\n Zapremina kugle sa poluprecnikom %2f je %.2f”, R,V);
-    return 0;
-}
-
-*/
-#include <stdio.h>
-#define PI 3.14
+#include <math.h>
 int main() {
-    float R, P, V;
+    float a,b,c,D,t,x1,x2,x1Re,x2Re,x1Im,x2Im;
+    printf("\n Unesite koeficijente kvadratne jednadzbe a,b,c:\n");
+    scanf("%f %f %f", &a,&b,&c);
+    D=b*b-4*a*c;
 
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
-
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
+    if(D>0) {
+        t=sqrt(D);
+        x1=(-b+t)/(2*a);
+        x2=(-b-t)/(2*a);
+        printf("\n Rjesenja su: x1=%f   x2=%f\n", x1,x2);
+    }
+    else if(D==0) {
+        x1=-b/(2*a);
+        printf("\n Rjesenja su: x1=x2=%f\n", x1);
+    }
+    else {
+        t=sqrt(-D);
+        x1Re=-b/(2*a);
+        x2Re=x1Re;
+        x1Im=t/(2*a);
+        x2Im=-x1Im;
+        printf("\n Rjesenja su: x1 = (%f,%f)\n", x1Re,x1Im);
+        printf(" x2 = (%f,%f)\n",x2Re,x2Im);
+    }
     return 0;
 }

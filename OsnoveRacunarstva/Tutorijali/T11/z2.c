@@ -1,32 +1,39 @@
 #include <stdio.h>
-void unesi (char s[],int velicina) {
-    char znak=getchar();
-    if(znak=='\n') znak=getchar();
-    int i=0;
-    while(i<velicina-1 && znak!='\n'){
-        s[i]=znak;
+void unesi(char niz[], int velicina) {
+    char znak = getchar();
+    if (znak == '\n') znak=getchar();
+    int i = 0;
+    while (i < velicina-1 && znak != '\n') {
+        niz[i] = znak;
         i++;
-        znak=getchar();
+        znak = getchar();
     }
-    s[i]='\0';
+    niz[i]='\0';
 }
-
-
-char *kapitaliziraj(char *s) {
-    char *pocetak=s;
-    while(*s!='\0') {
-        if(s==pocetak || *(s-1)==' ') {
-            if(*s>='a' && *s<='z') *s-='a'-'A';
+void zamijeni1(char* s) {
+    int duzina = 4;
+    while (*s != '\0') {
+        if (*s == '1') {
+            char* kraj = s;
+            while (*kraj != '\0') kraj++;
+            while (kraj > s) {
+                *(kraj+duzina) = *kraj;
+                kraj--;
+            }
+            //	while(*s!=' ' && *s!='\0') *s++='s';
+            *s++ = 'j'; *s++ = 'e'; *s++ = 'd';
+            *s++ = 'a'; *s = 'n';
+            //s--;
         }
         s++;
     }
-    return pocetak;
 }
-
 int main() {
-    char s[100];
-    printf("Unesite neki tekst: ");
-    unesi(s,100);
-    printf("%s",kapitaliziraj(s));
+    char tekst[100];
+    printf("Unesite tekst: ");
+    unesi(tekst, 100);
+    zamijeni1(tekst);
+    printf("Nakon zamjene: %s", tekst);
     return 0;
 }
+

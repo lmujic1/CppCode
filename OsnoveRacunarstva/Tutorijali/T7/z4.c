@@ -1,29 +1,24 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Zadato je geometrijsko tijelo koje izgleda kao na slici 1. Odredite koji su potrebni ulazni podaci u program,
-te napravite program koji izračunava površinu i zapreminu tog geometrijskog tijela. U zadatku za broj π koristite
-simboličku konstantu odnosno naredbu #define.
+Napravite funkciju
 
-Primjer izlaza koji program treba da daje je:
+int prost(int x)
 
-	Povrsina tijela sa slike je 5.234 cm2.
-	Zapremina tijela sa slike je 16.200 cm3.
-
+koja vraća 1 (logička istina) ako je broj x prost, a 0 (logička neistina) ako x nije prost.
+Zatim iskoristite ovu funkciju u programu koji ispisuje sve proste brojeve između 1 i 100 (svaki broj u zasebnom redu).
 */
 #include <stdio.h>
-#define PI 3.14
+
+int prost (int x) {
+    int i,brojac=1;
+    for(i=2;i<x;i++) if(x%i==0) brojac++;
+    if(brojac>1 || x==1) return 0;
+    else return 1;
+}
+
 int main() {
-    double a,b,c,h,r,P,V;
-    printf("Unesite dimenzije kvadra sa slike: ");
-    scanf("%lf,%lf,%lf", &a,&b,&c);
-    printf("\nUnesite visinu i poluprecnik valjka sa slike: ");
-    scanf("%lf,%lf", &h, &r);
-    P=2*a*b+2*a*c+2*b*c+2*PI*r*h;
-    V=a*b*c+r*r*PI*h;
-    printf("\nPovrsina tijela sa slike je %.3f",P);
-    printf("\nZapremina tijela sa slike je %.3f", V);
+    int i;
+    for(i=1;i<100;i++) {
+        if(prost(i)) printf("%d\n",i);
+    }
     return 0;
 }

@@ -1,30 +1,23 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
-/*
- Modificirajte prethodni program tako da program pored površine kruga i zapremine kugle sa poluprečnikom R
- izračunava i površinu lopte sa tim poluprečnikom.
-
-Napomena: Površina lopte se računa po formuli:
-
-P=4r2
-
-gdje je r poluprečnik lopte.
-
-*/
 #include <stdio.h>
-#define PI 3.14
-int main() {
-    float R, P, V, PL;
 
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
-    PL=4*R*R*PI;
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
-    printf("\n Povrsina lopte sa poluprecnikom %.2f je %.2f", R,PL);
+int main() {
+    int d,m;
+    printf("Dan: ");
+    scanf("%d",&d);
+    printf("Mjesec: ");
+    scanf("%d",&m);
+    printf("Vas znak je ");
+    if((d>=20 && m==1) || (d<=18 && m==2)) printf ("Vodolija!");
+    else if((d>=19 && m==2) || (d<=20 && m==3)) printf("Ribe!");
+    else if((d>=21 && m==3) || (d<=19 && m==4)) printf("Ovan!");
+    else if((d>=20 && m==4) || (d<=20 && m==5)) printf("Bik!");
+    else if((d>=21 && m==5) || (d<=20 && m==6)) printf("Blizanci!");
+    else if((d>=21 && m==6) || (d<=22 && m==7)) printf("Rak!");
+    else if((d>=23 && m==7) || (d<=22 && m==8)) printf("Lav!");
+    else if((d>=23 && m==8) || (d<=22 && m==9)) printf("Djevica!");
+    else if((d>=23 && m==9) || (d<=22 && m==10)) printf("Vaga!");
+    else if((d>=23 && m==10) || (d<=21 && m==11)) printf("Skorpija!");
+    else if((d>=22 && m==11) || (d<=21 && m==12)) printf("Strijelac!");
+    else printf("Jarac!");
     return 0;
 }

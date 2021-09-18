@@ -1,29 +1,24 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Zadato je geometrijsko tijelo koje izgleda kao na slici 1. Odredite koji su potrebni ulazni podaci u program,
-te napravite program koji izračunava površinu i zapreminu tog geometrijskog tijela. U zadatku za broj π koristite
-simboličku konstantu odnosno naredbu #define.
+ Napisati program koji će izračunavati vrijednost konačnog reda:
 
-Primjer izlaza koji program treba da daje je:
+S=i=1n(-1)i-1i
 
-	Povrsina tijela sa slike je 5.234 cm2.
-	Zapremina tijela sa slike je 16.200 cm3.
+Broj n se unosi sa tastature, a rezultat sume treba ispisati na ekranu zaokružen na tri decimale. Primjer ulaza i izlaza:
+
+Unesite broj n: 5
+Koristeci 5 clanova suma je 0.783.
 
 */
 #include <stdio.h>
-#define PI 3.14
+#include <math.h>
 int main() {
-    double a,b,c,h,r,P,V;
-    printf("Unesite dimenzije kvadra sa slike: ");
-    scanf("%lf,%lf,%lf", &a,&b,&c);
-    printf("\nUnesite visinu i poluprecnik valjka sa slike: ");
-    scanf("%lf,%lf", &h, &r);
-    P=2*a*b+2*a*c+2*b*c+2*PI*r*h;
-    V=a*b*c+r*r*PI*h;
-    printf("\nPovrsina tijela sa slike je %.3f",P);
-    printf("\nZapremina tijela sa slike je %.3f", V);
+    int i,n;
+    double suma=0;
+    printf("Unesite broj n: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++) {
+        suma=suma+((pow(-1,i-1)*1.)/i);
+    }
+    printf("Koristeci %d clanova suma je %.3lf.", n,suma);
     return 0;
 }

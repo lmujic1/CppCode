@@ -1,29 +1,44 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Zadato je geometrijsko tijelo koje izgleda kao na slici 1. Odredite koji su potrebni ulazni podaci u program,
-te napravite program koji izračunava površinu i zapreminu tog geometrijskog tijela. U zadatku za broj π koristite
-simboličku konstantu odnosno naredbu #define.
+Korisnik sa tastature unosi osam realnih brojeva koji predstavljaju mjerenja temperature tokom jednog dana (temperatura se mjeri svaka 3 sata).
+Napišite program koji treba ispisati najveću temperaturu tokom jednog dana te prosječnu temperaturu.
 
-Primjer izlaza koji program treba da daje je:
+Primjer ulaza i izlaza programa:
+	Unesite temperature: 10 11 14 18 20 16 12 11
+Maksimalna temperatura: 20.0
+	Prosjecna temperatura: 14.0
 
-	Povrsina tijela sa slike je 5.234 cm2.
-	Zapremina tijela sa slike je 16.200 cm3.
+Ovaj zadatak riješite tako što ćete napraviti dvije funkcije:
+
+Funkcija maxtemp() koja vraća maksimalnu vrijednost niza. Prototip:
+float maxtemp(float p[8]);
+
+Funkcija prtemp() koja vraća prosječnu vrijednost elemenata niza. Prototip:
+float prtemp(float p[8]);
 
 */
 #include <stdio.h>
-#define PI 3.14
+float maxtemp(float p[8]) {
+    float max;
+    int i;
+    max=p[0];
+    for(i=0;i<8;i++) {
+        if(p[i]>max) max=p[i];
+    }
+    return max;
+}
+
+float prtemp (float p[8]) {
+    float suma=0;
+    int i;
+    for(i=0;i<8;i++) suma+=p[i];
+    return suma/8;
+}
 int main() {
-    double a,b,c,h,r,P,V;
-    printf("Unesite dimenzije kvadra sa slike: ");
-    scanf("%lf,%lf,%lf", &a,&b,&c);
-    printf("\nUnesite visinu i poluprecnik valjka sa slike: ");
-    scanf("%lf,%lf", &h, &r);
-    P=2*a*b+2*a*c+2*b*c+2*PI*r*h;
-    V=a*b*c+r*r*PI*h;
-    printf("\nPovrsina tijela sa slike je %.3f",P);
-    printf("\nZapremina tijela sa slike je %.3f", V);
+    float temp[8];
+    int i;
+    printf("Unesite temperature: ");
+    for(i=0;i<8;i++) scanf("%f",&temp[i]);
+    printf("Maksimalna temperatura: %.1f",maxtemp(temp));
+    printf("\nProsjecna temperatura: %.1f",prtemp(temp));
     return 0;
 }

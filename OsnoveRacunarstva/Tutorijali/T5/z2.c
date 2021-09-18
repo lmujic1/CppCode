@@ -1,30 +1,36 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
-/*
- Modificirajte prethodni program tako da program pored površine kruga i zapremine kugle sa poluprečnikom R
- izračunava i površinu lopte sa tim poluprečnikom.
-
-Napomena: Površina lopte se računa po formuli:
-
-P=4r2
-
-gdje je r poluprečnik lopte.
-
-*/
 #include <stdio.h>
-#define PI 3.14
-int main() {
-    float R, P, V, PL;
 
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
-    PL=4*R*R*PI;
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
-    printf("\n Povrsina lopte sa poluprecnikom %.2f je %.2f", R,PL);
+int main() {
+
+    double A[5],B[5];
+    int i;
+
+    printf("Unesite clanove niza A: ");
+    for(i=0;i<5;i++) {
+        scanf("%lf",&A[i]);
+    }
+
+    printf("Unesite clanove niza B: ");
+    for(i=0;i<5;i++) {
+        scanf("%lf",&B[i]);
+    }
+
+    printf("Niz A glasi: ");
+    for(i=0;i<5;i++) {
+        if(i==4) printf("%.2lf\n",A[i]);
+        else printf("%.2lf, ",A[i]);
+    }
+
+    printf("Niz B glasi: ");
+    for(i=0;i<5;i++) {
+        if(i==4) printf("%.2lf\n",B[i]);
+        else printf("%.2lf, ",B[i]);
+    }
+
+    printf("Niz C glasi: ");
+    for(i=0;i<5;i++) {
+        if(i==4) printf("%.2lf",2*A[i]+B[i]);
+        else printf("%.2lf, ",2*A[i]+B[i]);
+    }
     return 0;
 }

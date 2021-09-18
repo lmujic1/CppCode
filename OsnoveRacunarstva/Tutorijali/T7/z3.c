@@ -1,29 +1,32 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Napraviti program koji sa standardnog ulaza (tastature) učitava koordinate dvije tačke u trodimenzionalnom prostoru.
-Tačke t1 i t2 su definirane kao trojke:
+Napravite funkciju "faktorijel" koja računa faktorijel datog broja. Zatim iskoristite ovu funkciju za program koji računa sumu:
 
-t1=(x1, y1, z1)
-t2=(x2, y2, z2)
+Primjer ulaza i izlaza:
+Unesite broj n u intervalu [1, 12]: 1
+Unesite realan broj x: 2.45
+Suma od 1 do 1 za x = 2.450 je 2.450
 
-Program na standardni izlaz (ekran) treba da ispiše udaljenost između ove dvije tačke. Za računanje drugog korijena možete
-koristiti funkciju sqrt koja je definisana u biblioteci “math.h”. Primjer korištenja ove funkcije je:
-	x = sqrt(y);  x je korijen od y */
-
-
+*/
 #include <stdio.h>
-#include <math.h>
+
+long faktorijel (int n) {
+    int fact=1,i;
+    for(i=1;i<=n;i++) fact*=i;
+
+    return fact;
+}
 
 int main() {
-    float x1,x2,y1,y2,z1,z2,d;
-    printf("Unesite koordinate tacke t1: ");
-    scanf("%f,%f,%f", &x1, &y1, &z1);
-    printf("\nUnesite koordinate tacke t2: ");
-    scanf("%f,%f,%f", &x2, &y2, &z2);
-    d=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
-    printf("\nUdaljenost tacaka t1 i t2 je %.2f", d);
+    double rez=0,x;
+    int i, n;
+    printf("Unesite broj n u intervalu [1, 12]: ");
+    scanf("%d",&n);
+    printf("Unesite realan broj x: ");
+    scanf("%lf",&x);
+
+    for(i=n;i>=1;i--) {
+        rez+=x/faktorijel(i);
+    }
+    printf("Suma od 1 do %d za x = %.3lf je %.3lf",n,x,rez);
     return 0;
 }

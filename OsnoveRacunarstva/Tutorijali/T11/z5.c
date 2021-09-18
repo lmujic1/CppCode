@@ -1,30 +1,65 @@
 /*
-Implementirajte funkciju strcmp() iz biblioteke string.h. Funkcija ima sljedeći prototip:
 
-      int strcmp(const char *s1, const char *s2);
+char* whitespace(char* s)
 
-Funkcija vrši abecedno poređenje dva data stringa i vraća cjelobrojnu vrijednost:
--1 ako je prvi string abecedno ispred drugog,
-0 ako su stringovi jednaki,
-1 ako je prvi string abecedno iza drugog.
+koja u datom stringu zamjenjuje sve "whitespace" znakove jednim razmakom. Dakle, novi redovi (\n) i tabovi (\t)
+trebaju biti zamijenjeni razmacima. Također, ukoliko se javlja više razmaka zaredom, treba ih zamijeniti jednim razmakom.
+Whitespace znakove na početku ili kraju stringa treba izbaciti. Ovo uključuje i kombinacije razmak-tab ili novi red-razmak itd.
+Funkcija treba vratiti pokazivač na prvi znak primljenog stringa radi lakšeg lančanog pozivanja. Napravite i kraći program koji
+demonstrira korištenje ove funkcije.
 
-Ako su dva stringa različite dužine, a identični su do kraja kraćeg, smatra se da je kraći string
-abecedno ispred dužeg.
+U zadatku je zabranjeno korištenje funkcija iz biblioteke string.h.
+
 */
 #include <stdio.h>
-int strcmp (const char *s1,const char *s2) {
-    while(*s1!='\0' && *s2!='\0') {
-        if(*s1>*s2) return 1;
-        else if(*s1<*s2) return -1;
+char *whitespace(char *s) {
+    char *begin=s,*beg,*end,*pom1,*pom2;
+    int ima=0;
+    while(*s!='\0') {
+        if(*s==' ' || *s=='\n' || *s=='\t') {
+            beg=s;
+            end=s;
+            while(*end==' ' || *end=='\n' || *end=='\t') end++;
+            pom1=beg;
+            pom2=beg;
+            while(pom1>=begin) {
+                if(*pom1!=' ' && *pom1!='\n' && *pom1!='\t') {
+                    ima=1;
+                    break;
+                }
+                else ima=0;
+                pom1--;
+            }
+            if(ima) {
+                while(*pom2!='\0') {
+                    if(*pom2!=' ' && *pom2!='\n' && *pom2!='\t') {
+                        ima=1;
+                        break;
+                    }
+                    else ima=0;
+                    pom2++;
+                }
+            }
 
-        s1++;
-        s2++;
+            if(ima) {
+                *beg=' ';
+                beg++;
+            }
+
+            while(*end!='\0') {
+                *beg=*end;
+                beg++;
+                end++;
+            }
+            *beg='\0';
+        }
+        s++;
     }
-    if(*s1!='\0') return 1;
-    else if(*s2!='\0') return -1;
-    else return 0;
+    return begin;
 }
+
+
 int main() {
-    printf("Tutorijal 9, Zadatak 6");
+    printf("Tutorijal 10, Zadatak 4");
     return 0;
 }

@@ -1,29 +1,38 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Zadato je geometrijsko tijelo koje izgleda kao na slici 1. Odredite koji su potrebni ulazni podaci u program,
-te napravite program koji izračunava površinu i zapreminu tog geometrijskog tijela. U zadatku za broj π koristite
-simboličku konstantu odnosno naredbu #define.
+Napišite funkciju sa prototipom:
 
-Primjer izlaza koji program treba da daje je:
+                                int prva_rijec(char *s);
 
-	Povrsina tijela sa slike je 5.234 cm2.
-	Zapremina tijela sa slike je 16.200 cm3.
+koja string zamjenjuje prvom riječi u stringu. Npr. ako je dat string:
+	"Danas je lijep dan."
+funkcija ga treba pretvoriti u:
+	"Danas"
+Funkcija vraća broj riječi u polaznom stringu (prije odsijecanja ostalih riječi).
+
+Radi jednostavnosti zadatka, pretpostavite da je riječ bilo koji niz znakova razdvojen znakom razmak.
+Za vježbu možete napraviti složenija pravila za riječi uzimajući u obzir znakove interpunkcije.
 
 */
 #include <stdio.h>
-#define PI 3.14
+
+int prva_rijec(char *s) {
+    int broj_rijeci=0,brojac=0;
+    while(*s!='\0') {
+        if((*s==' ' || *(s+1)=='\0')&&(*(s+1)!=' ')) broj_rijeci++;
+        if(brojac==0){
+            while(*s==' ') s++;
+            brojac=1;
+        }
+        else if(*s==' ') *s='\0';
+        s++;
+    }
+    return broj_rijeci;
+}
+
 int main() {
-    double a,b,c,h,r,P,V;
-    printf("Unesite dimenzije kvadra sa slike: ");
-    scanf("%lf,%lf,%lf", &a,&b,&c);
-    printf("\nUnesite visinu i poluprecnik valjka sa slike: ");
-    scanf("%lf,%lf", &h, &r);
-    P=2*a*b+2*a*c+2*b*c+2*PI*r*h;
-    V=a*b*c+r*r*PI*h;
-    printf("\nPovrsina tijela sa slike je %.3f",P);
-    printf("\nZapremina tijela sa slike je %.3f", V);
+    char recenica[]="     Danas je lijep dan.";
+    printf("%s",recenica);
+    printf("\n%d",prva_rijec(recenica));
+    printf("\n%s",recenica);
     return 0;
 }

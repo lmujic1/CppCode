@@ -1,165 +1,271 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-    TP 16/17 (Tutorijal 11, Zadatak 4)
-	Autotestove napisao Haris Hasic. Sve primjedbe/zalbe, sugestije
-	i pitanja slati na mail: hhasic2@etf.unsa.ba.
+    TP 16/17 (Tutorijal 12, Zadatak 6)
+	Autotestove napisao Kerim Hodzic. Sve primjedbe/zalbe, sugestije
+	i pitanja slati na mail: khodzic2@etf.unsa.ba.
 
 	Vrsit ce se provjera na prepisivanje tutorijala (na kraju semestra)
 */
 #include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cstring>
-#include <algorithm>
-class Tim {
-    char ime_tima[20];
-    int broj_odigranih;
-    int broj_pobjeda;
-    int broj_nerijesenih;
-    int broj_poraza;
-    int broj_datih;
-    int broj_primljenih;
-    int broj_poena;
+#include <stdexcept>
+#include <new>
+template <typename TipEl>
+class Matrica {
+    int br_redova, br_kolona;
+    TipEl **elementi;
+    char ime_matrice;
+    static TipEl **AlocirajMemoriju(int br_redova, int br_kolona);
+    static void DealocirajMemoriju(TipEl **elementi, int br_redova);
+    void KopirajElemente(TipEl **elementi);
+    void TestIndeksa(int index1, int index2) const {
+        if(index1<1 || index2<1 || index1>br_redova || index2>br_kolona)
+            throw std::range_error("Neispravan indeks");
+    }
 public:
-    Tim(const char ime[]) {
-        if(std::strlen(ime)>=20) throw std::range_error("Predugacko ime tima");
-        std::strcpy(ime_tima,ime);
-        broj_odigranih=0;
-        broj_pobjeda=0;
-        broj_nerijesenih=0;
-        broj_poraza=0;
-        broj_datih=0;
-        broj_poena=0;
-        broj_primljenih=0;
-    }
-    void ObradiUtakmicu(int broj_datih, int broj_primljenih) {
-        if(broj_datih<0 || broj_primljenih<0) throw std::range_error("Neispravan broj golova");
-        Tim::broj_datih+=broj_datih;
-        Tim::broj_primljenih+=broj_primljenih;
-        broj_odigranih++;
-        if(broj_datih>broj_primljenih) { broj_pobjeda++; broj_poena+=3; }
-        else if(broj_datih==broj_primljenih) { broj_nerijesenih++; broj_poena++; }
-        else broj_poraza++;
-    }
-    const char *DajImeTima() const {
-        return ime_tima;
-    }
-    int DajBrojPoena() const {
-        return broj_poena;
-    }
-    int DajGolRazliku() const {
-        return broj_datih-broj_primljenih;
-    }
-    void IspisiPodatke() const {
-        std::cout<<std::left<<std::setw(23)<<ime_tima<<std::right<<broj_odigranih<<std::setw(4)<<
-                 broj_pobjeda<<std::setw(4)<<broj_nerijesenih<<std::setw(4)<<
-                 broj_poraza<<std::setw(4)<<broj_datih<<std::setw(4)<<broj_primljenih<<std::setw(4)<<broj_poena<<std::endl;
-    }
-    friend class Liga;
-};
+    Matrica(int br_redova, int br_kolona, char ime = 0);
+    Matrica(const Matrica &m);
+    Matrica(Matrica &&m);
+    ~Matrica() { DealocirajMemoriju(elementi, br_redova); }
+    Matrica &operator =(const Matrica &m);
+    Matrica &operator =(Matrica &&m);
 
-class Liga {
-    int broj_timova;
-    const int max_br_timova;
-    Tim **timovi;
-    void OslobodiTimove() {
-        if(timovi==nullptr) return;
-        for(int i=0;i<broj_timova;i++) delete timovi[i];
-        delete [] timovi;
-    }
-    int PronadjiTim(const char *ime_tima) const {
-        for(int i=0; i<broj_timova; i++) if(std::strcmp(ime_tima, timovi[i]->DajImeTima())==0) return i;
-        return -1;
-    }
-public:
-    explicit Liga(int velicina_lige) : broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]) {}
-    explicit Liga(std::initializer_list<Tim> lista_timova) : broj_timova(lista_timova.size()), max_br_timova(lista_timova.size()), timovi (new Tim*[lista_timova.size()]){
-        int br(0);
-        try{
-            for(auto tim : lista_timova) timovi[br++]=new Tim(tim);
-        }
-        catch(...) {
-            for(int i=0;i<br;i++) delete timovi[i];
-            throw;
-        }
-    }
-    ~Liga() {
-        for(int i=0;i<broj_timova;i++) delete timovi[i];
-        delete [] timovi;
-    }
-    Liga(const Liga &l) : max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.broj_timova]{}) {
-        if(l.max_br_timova!=max_br_timova) throw std::logic_error("Nesaglasni kapaciteti liga");
-        try{
-            for(int i=0;i<broj_timova;i++)
-                timovi[i]=new Tim(*l.timovi[i]);
-        }
-        catch(...) {
-            OslobodiTimove();
-            throw;
-        }
-    }
-    Liga(Liga &&l) : max_br_timova(l.max_br_timova), broj_timova(l.broj_timova) {
-        if(&l!=this) {
-            for(int i=0;i<max_br_timova;i++) delete timovi[i];
-            delete [] timovi;
-            timovi=l.timovi;
-            l.timovi=nullptr;
-        }
-    }
-    Liga &operator =(const Liga &l) {
-        if(l.max_br_timova!=max_br_timova) throw std::logic_error("Nesaglasni kapaciteti liga");
-        if(&l==this) return *this;
-        for(int i=0;i<broj_timova;i++) delete timovi[i];
-        broj_timova=l.broj_timova;
-        try{
-            for(int i=0;i<broj_timova;i++) timovi[i]=new Tim(*l.timovi[i]);
-        }
-        catch(...) {
-            OslobodiTimove();
-            throw;
-        }
-        return *this;
-    }
-    Liga &operator =(Liga &&l) {
-        if(l.max_br_timova!=broj_timova) throw std::logic_error("Nesaglasni kapaciteti liga");
-        if(&l==this) return *this;
-        timovi=l.timovi;
-        broj_timova=l.broj_timova;
-        l.timovi=nullptr;
-        return *this;
-    }
-    void DodajNoviTim(const char ime_tima[]) {
-        if(broj_timova==max_br_timova) throw std::range_error("Liga popunjena");
-        if(PronadjiTim(ime_tima)!=-1) throw std::logic_error("Tim vec postoji");
-        if(std::strlen(ime_tima)>20) throw std::range_error("Predugacko ime tima");
-        try {
-            timovi[broj_timova++]=new Tim(ime_tima);
-        }
-        catch(std::bad_alloc) {
-            broj_timova--;
-            throw std::domain_error("Neuspjesno dodavanje u ligu");
-        }
-    }
-    void RegistrirajUtakmicu(const char tim1[], const char tim2[], int rezultat_1, int rezultat_2) {
-        if(rezultat_1<0 || rezultat_2<0) throw std::range_error("Neispravan broj golova");
-        if(PronadjiTim(tim1)==-1 || PronadjiTim(tim2)==-1) throw std::domain_error("Tim nije nadjen");
-        timovi[PronadjiTim(tim1)]->ObradiUtakmicu(rezultat_1,rezultat_2);
-        timovi[PronadjiTim(tim2)]->ObradiUtakmicu(rezultat_2,rezultat_1);
-    }
-    void IspisiTabelu() {
-        std::sort(timovi, timovi+broj_timova, [](Tim *tim1, Tim*tim2) {
-            if(tim1->DajBrojPoena()!=tim2->DajBrojPoena()) return tim1->DajBrojPoena()>tim2->DajBrojPoena();
-            else if(tim1->DajGolRazliku()!=tim2->DajGolRazliku()) return tim1->DajGolRazliku()>tim2->DajGolRazliku();
-            else {
-                return std::strcmp(tim1->DajImeTima(),tim2->DajImeTima())<0;
+
+
+    friend std::ostream& operator<<(std::ostream& tok, const Matrica &m) {
+        int a(tok.width());
+        for(int i=0;i<m.br_redova;i++) {
+            for(int j=0;j<m.br_kolona;j++){
+                tok<<std::setw(a)<<m.elementi[i][j];
             }
-        });
-        for(int i=0; i<broj_timova; i++) timovi[i]->IspisiPodatke();
+            tok<<std::endl;
+        }
+        return tok;
+    }
+
+    friend std::istream& operator>>(std::istream& tok, const Matrica &m) {
+        for(int i=0;i<m.br_redova;i++) {
+            for(int j=0;j<m.br_kolona;j++) {
+                std::cout<<m.ime_matrice<<"("<<i+1<<","<<j+1<<") = ";
+                tok>>m.elementi[i][j];
+            }
+        }
+        return tok;
+    }
+
+    friend Matrica operator +(const Matrica &t1,const Matrica &t2) {
+        if(t1.br_redova!=t2.br_redova || t1.br_kolona!=t2.br_kolona) throw std::domain_error("Matrice nemaju jednake dimenzije!");
+        Matrica t3(t1.br_redova,t1.br_kolona);
+        for(int i=0;i<t1.br_redova;i++) {
+            for(int j=0;j<t1.br_kolona;j++) {
+                t3.elementi[i][j]=t1.elementi[i][j]+t2.elementi[i][j];
+            }
+        }
+        return t3;
+    }
+
+    friend Matrica operator -(const Matrica &t1,const Matrica &t2) {
+        if(t1.br_redova!=t2.br_redova || t1.br_kolona!=t2.br_kolona) throw std::domain_error("Matrice nemaju jednake dimenzije!");
+        Matrica t3(t1.br_redova,t1.br_kolona);
+        for(int i=0;i<t1.br_redova;i++) {
+            for(int j=0;j<t1.br_kolona;j++) {
+                t3.elementi[i][j]=t1.elementi[i][j]-t2.elementi[i][j];
+            }
+        }
+        return t3;
+    }
+
+    friend Matrica operator *(const Matrica &t,double x) {
+        Matrica t3(t.br_redova,t.br_kolona);
+        for(int i=0;i<t.br_redova;i++) {
+            for(int j=0;j<t.br_kolona;j++) {
+                t3.elementi[i][j]=t.elementi[i][j]*x;
+            }
+        }
+        return t3;
+    }
+
+    friend Matrica operator *(double x,const Matrica &t) {
+        Matrica t3(t.br_redova,t.br_kolona);
+        for(int i=0;i<t.br_redova;i++) {
+            for(int j=0;j<t.br_kolona;j++) {
+                t3.elementi[i][j]=t.elementi[i][j]*x;
+            }
+        }
+        return t3;
+    }
+
+    friend Matrica operator *(const Matrica &t1, const Matrica &t2) {
+        if(t1.br_redova!=t2.br_kolona) throw std::domain_error("Matrice nisu saglasne za mnozenje");
+        Matrica t3(t1.br_redova,t2.br_kolona);
+        for(int i=0;i<t1.br_redova;i++) {
+            for(int j=0;j<t2.br_kolona;j++) {
+                for(int k=0;k<t2.br_redova;k++)
+                    t3.elementi[i][j]+=t1.elementi[i][k]*t2.elementi[k][j];
+            }
+
+        }
+        return t3;
+    }
+
+    Matrica operator +=(const Matrica &t) {
+        if(this->br_redova!=t.br_redova || this->br_kolona!=t.br_kolona) throw std::domain_error("Matrice nemaju jednake dimenzije!");
+        Matrica t3(t.br_redova,t.br_kolona);
+        for(int i=0;i<t.br_redova;i++) {
+            for(int j=0;j<t.br_kolona;j++) {
+                this->elementi[i][j]+=t.elementi[i][j];
+            }
+        }
+        return *this;
+    }
+
+    Matrica operator -=(const Matrica &t) {
+        if(this->br_redova!=t.br_redova || this->br_kolona!=t.br_kolona) throw std::domain_error("Matrice nemaju jednake dimenzije!");
+        Matrica t3(t.br_redova,t.br_kolona);
+        for(int i=0;i<t.br_redova;i++) {
+            for(int j=0;j<t.br_kolona;j++) {
+                this->elementi[i][j]-=t.elementi[i][j];
+            }
+        }
+        return *this;
+    }
+
+    Matrica operator *=(double x) {
+        for(int i=0;i<br_redova;i++) {
+            for(int j=0;j<br_kolona;j++) {
+                this->elementi[i][j]*=x;
+            }
+        }
+        return *this;
+    }
+
+    Matrica operator *=(const Matrica &t) {
+        if(br_redova!=t.br_kolona) throw std::domain_error("Matrice nisu saglasne za mnozenje");
+        Matrica t3(br_redova,t.br_kolona);
+        for(int i=0;i<br_redova;i++) {
+            for(int j=0;j<t.br_kolona;j++) {
+                for(int k=0;k<t.br_redova;k++)
+                    t3.elementi[i][j]+=elementi[i][k]*t.elementi[k][j];
+            }
+
+        }
+        *this=t3;
+        return *this;
+    }
+
+    TipEl* operator [] (int indeks) const {
+        return elementi[indeks];
+    }
+    TipEl* &operator [] (int indeks) {
+        return elementi[indeks];
+    }
+    TipEl &operator ()(int a, int b){
+        TestIndeksa(a,b); return elementi[a-1][b-1];
+    }
+    TipEl operator ()(int a, int b) const {
+        TestIndeksa(a,b); return elementi[a-1][b-1];
+    }
+
+    operator std::string() const{
+        std::string s;
+        s.push_back('{');
+        for(int i=0; i<br_redova; i++){
+            s.push_back('{');
+            for(int j=0; j<br_kolona; j++){
+                if(j==br_kolona-1){
+                    s+=std::to_string(int(elementi[i][j]));
+                    s.push_back('}');
+                    break;
+                }
+                s+=std::to_string(int(elementi[i][j]));
+                s.push_back(',');
+            }
+            if(i==br_redova-1) { s.push_back('}'); break; }
+            s.push_back(',');
+        }
+        return s;
     }
 };
+template <typename TipEl>
+TipEl ** Matrica<TipEl>::AlocirajMemoriju(int br_redova, int br_kolona) {
+    TipEl **elementi(new TipEl*[br_redova]{});
+    try {
+        for(int i = 0; i < br_redova; i++) elementi[i] = new TipEl[br_kolona]{};
+    }
+    catch(...) {
+        DealocirajMemoriju(elementi, br_redova); throw;
+    }
+    return elementi;
+}
+
+template <typename TipEl>
+void Matrica<TipEl>::DealocirajMemoriju(TipEl **elementi, int br_redova) {
+    for(int i = 0; i < br_redova; i++) delete[] elementi[i];
+    delete[] elementi;
+}
+
+template <typename TipEl>
+Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) : br_redova(br_redova), br_kolona(br_kolona),
+                                                                  ime_matrice(ime), elementi(AlocirajMemoriju(br_redova, br_kolona)) {}
+
+template <typename TipEl>
+void Matrica<TipEl>::KopirajElemente(TipEl **elementi) {
+    for(int i = 0; i < br_redova; i++)
+        for(int j = 0; j < br_kolona; j++)
+            Matrica::elementi[i][j] = elementi[i][j];
+}
+
+template <typename TipEl>
+Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova), br_kolona(m.br_kolona),
+                                                   ime_matrice(m.ime_matrice), elementi(AlocirajMemoriju(m.br_redova, m.br_kolona)) {
+    KopirajElemente(m.elementi);
+}
+
+template <typename TipEl>
+Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova), br_kolona(m.br_kolona),
+                                              elementi(m.elementi), ime_matrice(m.ime_matrice) {
+    m.br_redova = 0; m.elementi = nullptr;
+}
+
+template <typename TipEl>
+Matrica<TipEl> &Matrica<TipEl>::operator =(const Matrica<TipEl> &m) {
+    if(br_redova < m.br_redova || br_kolona < m.br_kolona) {
+        TipEl **novi_prostor(AlocirajMemoriju(m.br_redova, m.br_kolona));
+        DealocirajMemoriju(elementi, br_redova);
+        elementi = novi_prostor;
+    }
+    else if(br_redova > m.br_redova)
+        for(int i = m.br_redova; i < br_redova; i++) delete elementi[i];
+    br_redova = m.br_redova; br_kolona = m.br_kolona;
+    ime_matrice = m.ime_matrice; KopirajElemente(m.elementi);
+    return *this;
+}
+
+template <typename TipEl>
+Matrica<TipEl> &Matrica<TipEl>::operator =(Matrica<TipEl> &&m) {
+    std::swap(br_redova, m.br_redova); std::swap(br_kolona, m.br_kolona);
+    std::swap(ime_matrice, m.ime_matrice); std::swap(elementi, m.elementi);
+    return *this;
+}
+
+
 
 int main() {
+    int m, n;
+    std::cout << "Unesi broj redova i kolona za matrice:\n";
+    std::cin >> m >> n;
+    try {
+        Matrica<double> a(m, n, 'A'), b(m, n, 'B');
+        std::cout << "Unesi matricu A:\n";
+        std::cin >> a;
+        std::cout << "Unesi matricu B:\n";
+        std::cin >> b;
+        std::cout << "Zbir ove dvije matrice je:\n";
+        std::cout << std::setw(7) << a + b;
+    }
+    catch(std::bad_alloc) {
+        std::cout << "Nema dovoljno memorije!\n";
+    }
     return 0;
 }

@@ -1,42 +1,54 @@
-/*
-Napišite funkciju max_slovo koja prima string a vraća (veliko) slovo koje se najviše puta pojavljuje u stringu.
-Funkcija ne treba razlikovati velika i mala slova. Ukoliko se više slova ponavlja isti broj puta, treba vratiti
-najmanje takvo slovo. Znakovi koji nisu slova nas ne zanimaju.
-
-Primjer: Ako string glasi:
-	"Ovo je probni primjer."
-Funkcija treba vratiti slovo O jer se ono pojavljuje tri puta u stringu a manje je od slova R koje se također
-pojavljuje tri puta.
-
-*/
 #include <stdio.h>
+#include <math.h>
+/* Definicija tacke i kruznice */
+struct Tacka {
+    double x,y;
+};
+struct Kruznica {
+    struct Tacka centar;
+    double poluprecnik;
+};
 
-char max_slovo(char *s) {
-    int i,brojac[91]={0},pozicija1,tmp,max=0;
-    while(*s!='\0') {
-        if(*s>='A' && *s<='Z') {
-            tmp=*s;
-            brojac[tmp]++;
-        }
-        else if(*s>='a' && *s<='z') {
-            tmp=*s;
-            tmp-='a'-'A';
-            brojac[tmp]++;
-        }
-        s++;
-    }
-    for(i='A';i<='Z';i++) {
-        if(brojac[i]>max) {
-            max=brojac[i];
-            pozicija1=i;
-        }
-    }
-    return pozicija1;
+/* Funkcije za unos */
+struct Tacka unos_tacke() {
+    struct Tacka t;
+    printf ("\nUnesite koordinate tacke (x, y): ");
+    scanf ("%lf,%lf", &t.x, &t.y);
+    return t;
 }
 
+struct Kruznica unos_kruznice() {
+    struct Kruznica k;
+    printf ("\nUnesite centar kruznice:");
+    k.centar = unos_tacke();
+    printf ("\nUnesite poluprecnik kruznice: ");
+    scanf("%lf", &k.poluprecnik);
+    return k;
+}
+
+/* Funkcija za udaljenost izmedju dvije tacke */
+float udaljenost(struct Tacka t1, struct Tacka t2) {
+    return sqrt( (t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y) );
+}
+
+/* Glavni program: Da li je tacka unutar kruznice */
 int main() {
-    //char s[]="Ovo je probni primjer.";
-    printf("Lejla voli Tarika najvise na svijetu.");
-    printf("\n%c",max_slovo("Lejla voli Tarika najvise na svijetu."));
+    struct Kruznica k;
+    struct Tacka t;
+    double d;
+    printf ("\nUnesite kruznicu:");
+    k = unos_kruznice();
+    printf ("\nUnesite neku tacku:");
+    t = unos_tacke();
+
+    /* Tacka se nalazi unutar kruznice ako je udaljenost tacke od centra
+    kruznice manja od poluprecnika kruznice */
+    d = udaljenost(t, k.centar);
+    if (d<k.poluprecnik)
+        printf("\nTacka je unutar kruznice.");
+    else if (d==k.poluprecnik)
+        printf("\nTacka je na kruznici.");
+    else
+        printf("\nTacka je izvan kruznice.");
     return 0;
 }

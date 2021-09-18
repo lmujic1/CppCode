@@ -1,29 +1,42 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Napraviti program koji sa standardnog ulaza (tastature) učitava koordinate dvije tačke u trodimenzionalnom prostoru.
-Tačke t1 i t2 su definirane kao trojke:
+Napišite funkciju max_slovo koja prima string a vraća (veliko) slovo koje se najviše puta pojavljuje u stringu.
+Funkcija ne treba razlikovati velika i mala slova. Ukoliko se više slova ponavlja isti broj puta, treba vratiti
+najmanje takvo slovo. Znakovi koji nisu slova nas ne zanimaju.
 
-t1=(x1, y1, z1)
-t2=(x2, y2, z2)
+Primjer: Ako string glasi:
+	"Ovo je probni primjer."
+Funkcija treba vratiti slovo O jer se ono pojavljuje tri puta u stringu a manje je od slova R koje se također
+pojavljuje tri puta.
 
-Program na standardni izlaz (ekran) treba da ispiše udaljenost između ove dvije tačke. Za računanje drugog korijena možete
-koristiti funkciju sqrt koja je definisana u biblioteci “math.h”. Primjer korištenja ove funkcije je:
-	x = sqrt(y);  x je korijen od y */
-
-
+*/
 #include <stdio.h>
-#include <math.h>
+
+char max_slovo(char *s) {
+    int i,brojac[91]={0},pozicija1,tmp,max=0;
+    while(*s!='\0') {
+        if(*s>='A' && *s<='Z') {
+            tmp=*s;
+            brojac[tmp]++;
+        }
+        else if(*s>='a' && *s<='z') {
+            tmp=*s;
+            tmp-='a'-'A';
+            brojac[tmp]++;
+        }
+        s++;
+    }
+    for(i='A';i<='Z';i++) {
+        if(brojac[i]>max) {
+            max=brojac[i];
+            pozicija1=i;
+        }
+    }
+    return pozicija1;
+}
 
 int main() {
-    float x1,x2,y1,y2,z1,z2,d;
-    printf("Unesite koordinate tacke t1: ");
-    scanf("%f,%f,%f", &x1, &y1, &z1);
-    printf("\nUnesite koordinate tacke t2: ");
-    scanf("%f,%f,%f", &x2, &y2, &z2);
-    d=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
-    printf("\nUdaljenost tacaka t1 i t2 je %.2f", d);
+    //char s[]="Ovo je probni primjer.";
+    printf("Lejla voli Tarika najvise na svijetu.");
+    printf("\n%c",max_slovo("Lejla voli Tarika najvise na svijetu."));
     return 0;
 }

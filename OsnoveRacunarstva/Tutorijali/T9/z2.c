@@ -1,30 +1,14 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
- Modificirajte prethodni program tako da program pored površine kruga i zapremine kugle sa poluprečnikom R
- izračunava i površinu lopte sa tim poluprečnikom.
-
-Napomena: Površina lopte se računa po formuli:
-
-P=4r2
-
-gdje je r poluprečnik lopte.
+Napišite funkciju zaokruzi koja kao parametar prima niz proizvoljne dužine sastavljen od realnih brojeva dvostruke preciznosti, a zatim sve brojeve u nizu zaokružuje na jednu decimalu.
 
 */
 #include <stdio.h>
-#define PI 3.14
+#include <math.h>
+void zaokruzi (double *n, int duzina) {
+    int i;
+    for(i=0;i<duzina;i++)
+        *(n+i)=round((*(n+i))*10)/10;
+}
 int main() {
-    float R, P, V, PL;
-
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
-    PL=4*R*R*PI;
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
-    printf("\n Povrsina lopte sa poluprecnikom %.2f je %.2f", R,PL);
     return 0;
 }

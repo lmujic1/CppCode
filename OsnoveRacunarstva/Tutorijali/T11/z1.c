@@ -1,65 +1,34 @@
-/*
-U prethodnom programu dodajte funkciju samoglasnici koja će prebrojati broj samoglasnika u zadatoj riječi.
-Prototip funkcije samoglasnici je:
+/*Modificirajte funkciju iz prethodnog zadatka tako da prima još jedan parametar:
 
-                                int samoglasnici(char *s);
+int strcmpi(const char *s1, const char *s2, int velikamala);
 
-Ova funkcija treba uzimati u obzir i velika i mala slova. Zatim pri kraju main() funkcije umetnite
-poziv funkcije samoglasnici tako da program na standardnom izlazu pored dužine riječi i broja pojavljivanja
-nekog znaka ispiše i broj samoglasnika u unesenoj riječi.
-
-Primjer ulaza i izlaza sada treba biti:
-        Unesite jednu rijec do 80 znakova (ENTER za kraj):
-        Otorinolaringologija
-        Koji znak treba prebrojati: o
-        Broj znakova o je: 4
-        Broj samoglasnika je: 10
-
-U ovom primjeru kod broja znakova o nije ubrojano početno veliko slovo O jer
-funkcija prebroji koju smo dali iznad razlikuje velika i mala slova.
+Parametar velikamala je logička vrijednost koja određuje da li će se pri poređenju uzimati u
+obzir razlika između velikih i malih slova (velika slova su abecedno ispred malih) ili ne.
 
 */
 #include <stdio.h>
 
-void unesi(char niz[], int velicina) {
-    char znak = getchar();
-    if (znak == '\n') znak=getchar();
-    int i = 0;
-    while (i < velicina-1 && znak != '\n') {
-        niz[i] = znak;
-        i++;
-        znak = getchar();
-    }
-    niz[i]='\0';
-}
+int strcmpi (const char *s1,const char *s2,int velikamala) {
+    char tmp1,tmp2;
+    while(*s1!='\0' && *s2!='\0') {
+        tmp1=*s1;
+        tmp2=*s2;
+        if(!velikamala) {
+            if(tmp1>='A'&&tmp1<='Z') tmp1+='a'-'A';
+            if(tmp2>='A'&&tmp2<='Z') tmp2+='a'-'A';
+        }
+        if(tmp1>tmp2) return 1;
+        else if(tmp1<tmp2) return -1;
 
-int prebroji(char* s, char znak) {
-    int broj = 0;
-    while (*s != '\0') {
-
-        if (*s == znak)
-            broj++;
-        s++;
+        s1++;
+        s2++;
     }
-    return broj;
-}
-
-int samoglasnici(char *s) {
-    int brojac=0;
-    while(*s!='\0') {
-        if(*s=='a' || *s=='A' || *s=='e' || *s=='E' || *s=='i' || *s=='I' || *s=='o' || *s=='O' || *s=='u' || *s=='U') brojac++;
-        s++;
-    }
-    return brojac;
+    if(*s1!='\0') return 1;
+    else if(*s2!='\0') return -1;
+    else return 0;
 }
 
 int main() {
-    char a[80],c;
-    printf ("\nUnesite jednu rijec do 80 znakova (ENTER za kraj):");
-    unesi(a, 80);
-    printf ("\nKoji znak treba prebrojati:");
-    scanf ("%c", &c);
-    printf ("\nBroj znakova %c je: %d\n",c,prebroji(a,c));
-    printf("Broj samoglasnika je: %d",samoglasnici(a));
+    printf("Tutorijal 9, Zadatak 7");
     return 0;
 }

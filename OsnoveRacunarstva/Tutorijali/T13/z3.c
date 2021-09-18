@@ -1,42 +1,87 @@
 /*
-Napišite funkciju max_slovo koja prima string a vraća (veliko) slovo koje se najviše puta pojavljuje u stringu.
-Funkcija ne treba razlikovati velika i mala slova. Ukoliko se više slova ponavlja isti broj puta, treba vratiti
-najmanje takvo slovo. Znakovi koji nisu slova nas ne zanimaju.
+Data je sljedeća struktura podataka:
 
-Primjer: Ako string glasi:
-	"Ovo je probni primjer."
-Funkcija treba vratiti slovo O jer se ono pojavljuje tri puta u stringu a manje je od slova R koje se također
-pojavljuje tri puta.
+	struct Osoba {
+		char ime[15];
+		char prezime[20];
+		int telefon;
+	};
+
+Napravite program koji sadrži niz od 100 osoba:
+
+	struct Osoba imenik[100];
+
+te omogućuje unos osobe ili ispis do sada unesenih osoba. Primjer ulaza i izlaza:
+
+	Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: 1
+	Unesite ime: Meho
+	Unesite prezime: Mehic
+	Unesite broj telefona: 123456
+	Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: 2
+	1. Meho Mehic, Tel: 123456
+	Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: 0
+
+Program treba sadržavati funkcije po uzoru na prethodne zadatke:
+unos_osobe
+ispis_osobe
+Niz ne smije biti deklarisan kao globalna promjenljiva nego treba biti lokalan za funkciju main.
 
 */
 #include <stdio.h>
 
-char max_slovo(char *s) {
-    int i,brojac[91]={0},pozicija1,tmp,max=0;
-    while(*s!='\0') {
-        if(*s>='A' && *s<='Z') {
-            tmp=*s;
-            brojac[tmp]++;
-        }
-        else if(*s>='a' && *s<='z') {
-            tmp=*s;
-            tmp-='a'-'A';
-            brojac[tmp]++;
-        }
-        s++;
+struct Osoba {
+    char ime[15];
+    char prezime[20];
+    int telefon;
+};
+
+void unesi (char niz[], int velicina) {
+    char znak=getchar();
+    if(znak=='\n') znak=getchar();
+    int i=0;
+    while(i<velicina-1 && znak!='\n'){
+        niz[i]=znak;
+        i++;
+        znak=getchar();
     }
-    for(i='A';i<='Z';i++) {
-        if(brojac[i]>max) {
-            max=brojac[i];
-            pozicija1=i;
-        }
-    }
-    return pozicija1;
+    niz[i]='\0';
+}
+
+struct Osoba unos_osobe(){
+    struct Osoba o;
+    printf("Unesite ime: ");
+    unesi(o.ime,15);
+    printf("Unesite prezime: ");
+    unesi(o.prezime,20);
+    printf("Unesite broj telefona: ");
+    scanf("%d",&o.telefon);
+    return o;
+}
+
+void ispis_osobe(struct Osoba o){
+    printf("%s %s, Tel: %d",o.ime,o.prezime,o.telefon);
 }
 
 int main() {
-    //char s[]="Ovo je probni primjer.";
-    printf("Lejla voli Tarika najvise na svijetu.");
-    printf("\n%c",max_slovo("Lejla voli Tarika najvise na svijetu."));
+    int i=0,n,broj_osoba;
+    struct Osoba imenik[100];
+    do {
+        printf("Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: ");
+        scanf("%d",&n);
+        if(n==1) {
+            imenik[i]=unos_osobe();
+            i++;
+        }
+        else if(n==2) {
+            broj_osoba=i;
+            for(i=0;i<broj_osoba;i++) {
+                printf("\n%d. ",i+1);
+                ispis_osobe(imenik[i]);
+            }
+            printf("\n");
+        }
+
+        else if(n==0) return 0;
+    } while(n!=0);
     return 0;
 }

@@ -1,30 +1,18 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
- Modificirajte prethodni program tako da program pored površine kruga i zapremine kugle sa poluprečnikom R
- izračunava i površinu lopte sa tim poluprečnikom.
-
-Napomena: Površina lopte se računa po formuli:
-
-P=4r2
-
-gdje je r poluprečnik lopte.
-
+Napisati program koji će ispisati brojeve koji su djeljivi sa 5, 7 ili 11, a koji su manji ili
+jednaki od nekog broja n koji je učitan sa tastature. Brojeve treba ispisati od najvećeg prema najmanjem.
+Obavezno koristiti for petlju i if-else strukturu.
 */
-#include <stdio.h>
-#define PI 3.14
-int main() {
-    float R, P, V, PL;
 
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
-    PL=4*R*R*PI;
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
-    printf("\n Povrsina lopte sa poluprecnikom %.2f je %.2f", R,PL);
+#include <stdio.h>
+
+int main() {
+    int n,i;
+    printf("Unesite broj n: ");
+    scanf("%d", &n);
+    for(i=n;i>=5;i--) {
+        if(i%5==0 || i%7==0 || i%11==0)
+            printf("%d\n",i);
+    }
     return 0;
 }

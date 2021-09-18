@@ -1,29 +1,36 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
 /*
-Napraviti program koji sa standardnog ulaza (tastature) učitava koordinate dvije tačke u trodimenzionalnom prostoru.
-Tačke t1 i t2 su definirane kao trojke:
+        X |   1   2   3   4   5   6   7   8   9  10
+	----+----------------------------------------
+	  1 |   1   2   3   4   5   6   7   8   9  10
+	  2 |   2   4   6   8  10  12  14  16  18  20
+	......
 
-t1=(x1, y1, z1)
-t2=(x2, y2, z2)
-
-Program na standardni izlaz (ekran) treba da ispiše udaljenost između ove dvije tačke. Za računanje drugog korijena možete
-koristiti funkciju sqrt koja je definisana u biblioteci “math.h”. Primjer korištenja ove funkcije je:
-	x = sqrt(y);  x je korijen od y */
-
-
+*/
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    float x1,x2,y1,y2,z1,z2,d;
-    printf("Unesite koordinate tacke t1: ");
-    scanf("%f,%f,%f", &x1, &y1, &z1);
-    printf("\nUnesite koordinate tacke t2: ");
-    scanf("%f,%f,%f", &x2, &y2, &z2);
-    d=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
-    printf("\nUdaljenost tacaka t1 i t2 je %.2f", d);
+    int i,j;
+    for(i=0;i<12;i++) {
+
+        if(i==0) {
+            printf("  X |");
+            for(j=1;j<=10;j++) printf("%4d",j);
+        }
+
+        else if(i==1) {
+            for(j=1;j<=45;j++) {
+                if(j==5) printf("+");
+                else printf("-");
+            }
+        }
+
+        else {
+            printf("%3d |",i-1);
+            for(j=1;j<=10;j++) {
+                printf("%4d", (i-1)*j);
+            }
+        }
+        printf("\n");
+    }
     return 0;
 }

@@ -569,7 +569,7 @@ void Test5L(JednostrukaLista<Tip> & l, Tip element) {
   std::cout<<std::endl;
 }*/
 
-int main ()
+int tt ()
 {
     JednostrukaLista<int> l;
     for(int i=0;i<9;i++) {

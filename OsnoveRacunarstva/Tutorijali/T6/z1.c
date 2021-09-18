@@ -1,40 +1,30 @@
-//
-// Created by 38760 on 18. 9. 2021..
-//
-
-/*
 #include <stdio.h>
-#define PI 3.14
-
-int main()
-{
-    float R, P, V;
-
-    // Unos poluprecnika sa tastature i izracunavanje
-
-    printf (“\Unesite poluprecnik:”);
-    scanf (“%f”, &R);
-    P=(R*R)*PI;
-    V=(4/3)*R*R*R*PI;
-
-    // Ispis na monitoru
-    printf(“\n Povrsina kruga sa poluprecnikom %  2f je %.2f”, R,P);
-    printf(“\n Zapremina kugle sa poluprecnikom %2f je %.2f”, R,V);
-    return 0;
-}
-
-*/
-#include <stdio.h>
-#define PI 3.14
+#define DUZINA 10
 int main() {
-    float R, P, V;
+    double niz[DUZINA],temp;
+    int i,j,max;
+    /* unos niza */
+    for (i=0; i<DUZINA; i++) {
+        printf("Unesite %d. realan broj: ", i+1);
+        scanf("%lf", &niz[i]);
+    }
 
-    printf("\nUnesite poluprecnik: ");
-    scanf("%f", &R);
-    P=R*R*PI;
-    V=(4./3)*R*R*R*PI;
+    for (i=0; i<DUZINA; i++) {
+        max=i;
+        for (j=i+1; j<DUZINA; j++) {
+            if (niz[j] > niz[max])
+                max = j;}
+        temp = niz[i];
+        niz[i] = niz[max];
+        niz[max] = temp;
+    }
 
-    printf("\n Povrsina kruga sa poluprecnikom %.2f je %.2f",R,P);
-    printf("\n Zapremina kugle sa poluprecnikom %.2f je %.2f", R, V);
+
+    /* ispis niza */
+    printf("Sortiran niz:\n");
+    for (i=0; i<DUZINA; i++)
+        printf("%g ", niz[i]);
+    printf("\n");
     return 0;
 }
+
