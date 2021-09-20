@@ -1,0 +1,20 @@
+
+Bcpp:CommentedCoded"Remove the commented out code.(¿®˜¼8Çä¾ÿ¿/
+Bcpp:CommentedCodeh"Remove the commented out code.(À“°Ğ8Çä¾ÿ¿/
+Gcpp:CommentedCodem"Remove the commented out code.(¬Ãµ’şÿÿÿÿ8Èä¾ÿ¿/
+Bcpp:CommentedCodes"Remove the commented out code.(¿®˜¼8Èä¾ÿ¿/
+[	cpp:S3229"@field 'pocetni' will be initialized after field 'broj_elemenata'(¸¿ös8úä¾ÿ¿/
+”	cpp:S4963	"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(‘ª¦ø8¶å¾ÿ¿/
+[	cpp:S5025":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8¸å¾ÿ¿/
+c!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(ˆŸ–:8¹å¾ÿ¿/
+r	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(æÇï—ûÿÿÿÿ8ºå¾ÿ¿/
+c!cpp:SingleDeclarationPerStatement/"0Define each identifier in a dedicated statement.(ˆŸ–:8¼å¾ÿ¿/
+[	cpp:S5025-":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8¼å¾ÿ¿/
+r	cpp:S50251"QReplace the use of "new" with an operation that automatically manages the memory.(æÇï—ûÿÿÿÿ8¾å¾ÿ¿/
+[	cpp:S5025@":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8¿å¾ÿ¿/
+m	cpp:S5025G"QReplace the use of "new" with an operation that automatically manages the memory.(ªÏ°8Áå¾ÿ¿/
+[	cpp:S5025P":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8Áå¾ÿ¿/
+Jcpp:S106Š".Replace this usage of "std::cout" by a logger.(üşš÷8Ëå¾ÿ¿/
+Ocpp:S106‹".Replace this usage of "std::cout" by a logger.(·ÃĞâüÿÿÿÿ8Ëå¾ÿ¿/
+‰	cpp:S3230"nDo not use the constructor's initializer list for data member "pocetni". Use the in-class initializer instead.(¸¿ös8Ìå¾ÿ¿/
+	cpp:S3230"uDo not use the constructor's initializer list for data member "broj_elemenata". Use the in-class initializer instead.(¸¿ös8Ìå¾ÿ¿/

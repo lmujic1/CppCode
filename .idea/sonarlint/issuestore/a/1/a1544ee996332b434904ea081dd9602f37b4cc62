@@ -1,0 +1,26 @@
+
+†	cpp:S5276Œ"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(Èþáƒ8¦±¶ÿ¿/
+Icpp:S1060".Replace this usage of "std::cout" by a logger.(­ÜÈÌ8ž²¶ÿ¿/
+Icpp:S1062".Replace this usage of "std::cout" by a logger.(…·Ÿé8Ÿ²¶ÿ¿/
+Icpp:S106K".Replace this usage of "std::cout" by a logger.(­ÜÈÌ8¤²¶ÿ¿/
+Icpp:S106M".Replace this usage of "std::cout" by a logger.(…·Ÿé8¥²¶ÿ¿/
+C	cpp:S5827b"'Replace the redundant type with "auto".(Ô­³é8ª²¶ÿ¿/
+V	cpp:S5025m":Rewrite the code so that you no longer need this "delete".(‰•Á¸8«²¶ÿ¿/
+m	cpp:S5025b"QReplace the use of "new" with an operation that automatically manages the memory.(Ô­³é8¬²¶ÿ¿/
+\	cpp:S1238ƒ"?Pass expensive to copy object "filename" by reference to const.(ßåÒˆ8¹²¶ÿ¿/
+C	cpp:S5827‰"'Replace the redundant type with "auto".(É¬–8¹²¶ÿ¿/
+m	cpp:S5025‰"QReplace the use of "new" with an operation that automatically manages the memory.(É¬–8¼²¶ÿ¿/
+\	cpp:S1238Ž"?Pass expensive to copy object "filename" by reference to const.(Î¥‚Ä8¾²¶ÿ¿/
+L	cpp:S5020‘"/Replace "rand" with the facilities in <random>.(†¿—¶8Á²¶ÿ¿/
+ncpp:S995•"MMake this parameter a pointer-to-const. The current type of "niz" is "int *".(…Ð¦ñûÿÿÿÿ8Á²¶ÿ¿/
+e!cpp:SingleDeclarationPerStatementž"0Define each identifier in a dedicated statement.(û›–Ô8Å²¶ÿ¿/
+Ocpp:S106Ÿ".Replace this usage of "std::cout" by a logger.(êèÃ±úÿÿÿÿ8Ç²¶ÿ¿/
+Ocpp:S106¡".Replace this usage of "std::cout" by a logger.(†Û™éúÿÿÿÿ8Ç²¶ÿ¿/
+Jcpp:S106£".Replace this usage of "std::cout" by a logger.(™ª–ü8È²¶ÿ¿/
+Jcpp:S106¥".Replace this usage of "std::cout" by a logger.(™Ç‘¹8È²¶ÿ¿/
+U	cpp:S1764­"8Identical sub-expressions on both sides of operator "/".(ù¢ˆ¦8Ë²¶ÿ¿/
+Ocpp:S106®".Replace this usage of "std::cout" by a logger.(Õž¾Ñÿÿÿÿÿ8Ë²¶ÿ¿/
+Jcpp:S106¯".Replace this usage of "std::cout" by a logger.(ëÇþÊ8Ì²¶ÿ¿/
+Ocpp:S106°".Replace this usage of "std::cout" by a logger.(õÂÄëûÿÿÿÿ8Ì²¶ÿ¿/
+_	cpp:S5945³"=Use "std::array" or "std::vector" instead of a C-style array.(¬Ë¯Šþÿÿÿÿ8Í²¶ÿ¿/
+N	cpp:S3584³",Potential leak of memory pointed to by 'niz'(¬Ë¯Šþÿÿÿÿ8¡å·ÿ¿/

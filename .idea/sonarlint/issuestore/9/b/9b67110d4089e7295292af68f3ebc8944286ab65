@@ -1,0 +1,39 @@
+
+r	cpp:S3490
+"VUse "=default" instead of the default implementation of this special member functions.(ƒ ñ­8Áû·ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(šÂÄÏ8Âû·ÿ¿/
+”	cpp:S4963"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(·±“ÿ8Åû·ÿ¿/
+„	cpp:S3230"cDo not assign data members in a constructor. Initialize member "nizMapa" in an initialization list.(ªßÅûÿÿÿÿ8Çû·ÿ¿/
+	cpp:S3230"eDo not assign data members in a constructor. Initialize member "maxBrojEl" in an initialization list.(˜é³Ø8Èû·ÿ¿/
+~	cpp:S3230"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(Ş€¿ş8Éû·ÿ¿/
+r	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ªßÅûÿÿÿÿ8Éû·ÿ¿/
+V	cpp:S5025!":Rewrite the code so that you no longer need this "delete".(­¨¸Í8Éû·ÿ¿/
+	cpp:S3230%"eDo not assign data members in a constructor. Initialize member "maxBrojEl" in an initialization list.(“ñ™è8Éû·ÿ¿/
+ƒ	cpp:S3230&"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(À—Ğüÿÿÿÿ8Êû·ÿ¿/
+	cpp:S3230'"cDo not assign data members in a constructor. Initialize member "nizMapa" in an initialization list.(£¿ñ´8Êû·ÿ¿/
+m	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(£¿ñ´8Êû·ÿ¿/
+V	cpp:S5025/":Rewrite the code so that you no longer need this "delete".(­¨¸Í8Ëû·ÿ¿/
+m	cpp:S50250"QReplace the use of "new" with an operation that automatically manages the memory.(£¿ñ´8Ëû·ÿ¿/
+C	cpp:S5827?"'Replace the redundant type with "auto".(ªä’€8Ïû·ÿ¿/
+V	cpp:S5025C":Rewrite the code so that you no longer need this "delete".(­¨¸Í8Ğû·ÿ¿/
+m	cpp:S5025?"QReplace the use of "new" with an operation that automatically manages the memory.(ªä’€8Ğû·ÿ¿/
+>	cpp:S1035b"Throw the exception by value.(Í ƒÕúÿÿÿÿ8×û·ÿ¿/
+N	cpp:S3471 "2Annotate this function with "override" or "final".(Ãô« 8Ùû·ÿ¿/
+S	cpp:S34715"2Annotate this function with "override" or "final".(¤³óÁüÿÿÿÿ8Şû·ÿ¿/
+N	cpp:S34719"2Annotate this function with "override" or "final".(ö÷¥8Şû·ÿ¿/
+S	cpp:S3471O"2Annotate this function with "override" or "final".(„é´ÿÿÿÿÿ8âû·ÿ¿/
+S	cpp:S3471V"2Annotate this function with "override" or "final".(ëƒ¥©ıÿÿÿÿ8äû·ÿ¿/
+N	cpp:S3471Y"2Annotate this function with "override" or "final".(–å²8äû·ÿ¿/
+Icpp:S106i".Replace this usage of "std::cout" by a logger.(ïÒæÕ8èû·ÿ¿/
+Ncpp:S106j".Replace this usage of "std::cout" by a logger.(…ú€™ûÿÿÿÿ8éû·ÿ¿/
+Hcpp:S106l".Replace this usage of "std::cout" by a logger.(Ï†º8éû·ÿ¿/
+Ncpp:S106q".Replace this usage of "std::cout" by a logger.(ÊøÛÿÿÿÿÿ8îû·ÿ¿/
+Icpp:S106r".Replace this usage of "std::cout" by a logger.(óÕèÛ8îû·ÿ¿/
+Hcpp:S106t".Replace this usage of "std::cout" by a logger.(Ï†º8ïû·ÿ¿/
+Icpp:S106y".Replace this usage of "std::cout" by a logger.(¾Œæ©8õû·ÿ¿/
+Icpp:S106z".Replace this usage of "std::cout" by a logger.(ÎØ8õû·ÿ¿/
+Icpp:S106|".Replace this usage of "std::cout" by a logger.(Ñí²©8öû·ÿ¿/
+Ocpp:S106".Replace this usage of "std::cout" by a logger.(êƒ•¤úÿÿÿÿ8ûû·ÿ¿/
+Jcpp:S106ƒ".Replace this usage of "std::cout" by a logger.(×¿ë’8ûû·ÿ¿/
+Ocpp:S106†".Replace this usage of "std::cout" by a logger.(½ş—œıÿÿÿÿ8üû·ÿ¿/
+Ocpp:S106•".Replace this usage of "std::cout" by a logger.(¿û…ƒıÿÿÿÿ8‡ü·ÿ¿/

@@ -1,0 +1,92 @@
+
+N	cpp:S1117Ñ"1declaration shadows a field of 'Grana<TipOznake>'(Š½ïå8­™¾ÿ¿/
+c	cpp:S5276—"Gimplicit conversion loses floating-point precision: 'double' to 'float'(Ì¸ïa8·™¾ÿ¿/
+c	cpp:S5276˜"Gimplicit conversion loses floating-point precision: 'double' to 'float'(¼ğ‹d8·™¾ÿ¿/
+d	cpp:S5276™"Gimplicit conversion loses floating-point precision: 'double' to 'float'(±«´·8·™¾ÿ¿/
+†	cpp:S5276”"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(ÓöÄ8š¾ÿ¿/
+†	cpp:S5276›"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(¹†ğ¢8š¾ÿ¿/
+l	cpp:S5276—"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(”ë‰¥ıÿÿÿÿ8‘š¾ÿ¿/
+f	cpp:S5276˜"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(ÓÚÔx8‘š¾ÿ¿/
+g	cpp:S5276 "Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(Û¡8‘š¾ÿ¿/
+g	cpp:S5276 "Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(Û¡8’š¾ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(ƒ ñ­8Ôš¾ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(šÂÄÏ8Ôš¾ÿ¿/
+™	cpp:S4963"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(›•îçşÿÿÿÿ8×š¾ÿ¿/
+ 	cpp:S3230$"ƒRemove this use of the constructor's initializer list for data member "brElemenata". It is redundant with the in-class initializer.(÷¦Ê¤8×š¾ÿ¿/
+m	cpp:S5025("QReplace the use of "new" with an operation that automatically manages the memory.(Æ‘¤û8Ùš¾ÿ¿/
+m	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(Æ‘¤û8Ûš¾ÿ¿/
+d	cpp:S6004="CUse the init-statement to declare "indeks" inside the if statement.(ğÖ¨Áÿÿÿÿÿ8Ûš¾ÿ¿/
+>	cpp:S1035;"Throw the exception by value.(ƒÍ–ıÿÿÿÿ8Ûš¾ÿ¿/
+>	cpp:S1035G"Throw the exception by value.(ƒÍ–ıÿÿÿÿ8Şš¾ÿ¿/
+m	cpp:S5025J"QReplace the use of "new" with an operation that automatically manages the memory.(Å€‘æ8ßš¾ÿ¿/
+[	cpp:S5025a":Rewrite the code so that you no longer need this "delete".(«Áÿúÿÿÿÿ8ãš¾ÿ¿/
+^	cpp:S6004k"CUse the init-statement to declare "indeks" inside the if statement.(‡ÕŠe8ãš¾ÿ¿/
+mcpp:S134o"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(ğİšûÿÿÿÿ8äš¾ÿ¿/
+9	cpp:S1035x"Throw the exception by value.(°îüÄ8äš¾ÿ¿/
+>	cpp:S1035i"Throw the exception by value.(ƒÍ–ıÿÿÿÿ8äš¾ÿ¿/
+V	cpp:S5025p":Rewrite the code so that you no longer need this "delete".(—Ğƒä8çš¾ÿ¿/
+n	cpp:S5205{"MReplace this function pointer with a template parameter or a "std::function".(à¨°®øÿÿÿÿ8çš¾ÿ¿/
+\	cpp:S5025ƒ":Rewrite the code so that you no longer need this "delete".(«Áÿúÿÿÿÿ8éš¾ÿ¿/
+e!cpp:SingleDeclarationPerStatementÉ"0Define each identifier in a dedicated statement.(ôò•Æ8ìš¾ÿ¿/
+d!cpp:SingleDeclarationPerStatementæ"0Define each identifier in a dedicated statement.(€½Ó8ñš¾ÿ¿/
+?	cpp:S1035í"Throw the exception by value.(ôò©üÿÿÿÿ8ñš¾ÿ¿/
+A	cpp:S3656÷"$Make this member variable "private".(¢ú²8÷š¾ÿ¿/
+F	cpp:S3656ø"$Make this member variable "private".(©µ‚ùÿÿÿÿ8÷š¾ÿ¿/
+@	cpp:S3656ù"$Make this member variable "private".(“ŠÓ-8÷š¾ÿ¿/
+T	cpp:S3471„"2Annotate this function with "override" or "final".(ëçÂÔùÿÿÿÿ8ùš¾ÿ¿/
+O	cpp:S3471’"2Annotate this function with "override" or "final".(ê…³›8ûš¾ÿ¿/
+O	cpp:S3471—"2Annotate this function with "override" or "final".(ñ³ºŠ8üš¾ÿ¿/
+?	cpp:S1035™"Throw the exception by value.(Á¯£“şÿÿÿÿ8üš¾ÿ¿/
+O	cpp:S3471¢"2Annotate this function with "override" or "final".(áÊ¾æ8şš¾ÿ¿/
+?	cpp:S1035¤"Throw the exception by value.(¨Ãü‚úÿÿÿÿ8ÿš¾ÿ¿/
+N	cpp:S3471¨"2Annotate this function with "override" or "final".( ÕX8€›¾ÿ¿/
+:	cpp:S1035²"Throw the exception by value.(Î¿®ø8›¾ÿ¿/
+:	cpp:S1035ª"Throw the exception by value.(‰²™›8›¾ÿ¿/
+N	cpp:S3471µ"2Annotate this function with "override" or "final".(™ ¼Z8‡›¾ÿ¿/
+:	cpp:S1035¾"Throw the exception by value.(Î¿®ø8‡›¾ÿ¿/
+:	cpp:S1035·"Throw the exception by value.(‰²™›8‡›¾ÿ¿/
+T	cpp:S3471Á"2Annotate this function with "override" or "final".(îâÇøıÿÿÿÿ8‹›¾ÿ¿/
+:	cpp:S1035É"Throw the exception by value.(Î¿®ø8Œ›¾ÿ¿/
+:	cpp:S1035Ã"Throw the exception by value.(‰²™›8Œ›¾ÿ¿/
+T	cpp:S3471Ì"2Annotate this function with "override" or "final".(µ³Â§ıÿÿÿÿ8›¾ÿ¿/
+O	cpp:S3471×"2Annotate this function with "override" or "final".(Âå¶Ê8”›¾ÿ¿/
+:	cpp:S1035Ù"Throw the exception by value.(€ëë8”›¾ÿ¿/
+T	cpp:S3471İ"2Annotate this function with "override" or "final".(ğå£Çúÿÿÿÿ8•›¾ÿ¿/
+:	cpp:S1035ß"Throw the exception by value.(€ëë8–›¾ÿ¿/
+T	cpp:S3471ã"2Annotate this function with "override" or "final".(•ÒÊáøÿÿÿÿ8—›¾ÿ¿/
+:	cpp:S1035ì"Throw the exception by value.(Î¿®ø8—›¾ÿ¿/
+:	cpp:S1035å"Throw the exception by value.(‰²™›8—›¾ÿ¿/
+O	cpp:S3471ï"2Annotate this function with "override" or "final".(¢ç8š›¾ÿ¿/
+:	cpp:S1035÷"Throw the exception by value.(Î¿®ø8š›¾ÿ¿/
+:	cpp:S1035ñ"Throw the exception by value.(‰²™›8››¾ÿ¿/
+T	cpp:S3471ú"2Annotate this function with "override" or "final".(–…İ¿üÿÿÿÿ8›¾ÿ¿/
+:	cpp:S1035‚"Throw the exception by value.(Î¿®ø8›¾ÿ¿/
+:	cpp:S1035ü"Throw the exception by value.(‰²™›8›¾ÿ¿/
+N	cpp:S3471…"2Annotate this function with "override" or "final".(İ˜¨P8¢›¾ÿ¿/
+:	cpp:S1035‡"Throw the exception by value.(€ëë8£›¾ÿ¿/
+Q	cpp:S3471‹"/Use "override" or "final" instead of "virtual".(³ç±Ğûÿÿÿÿ8¤›¾ÿ¿/
+icpp:S134š"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(‘ñ¾å8§›¾ÿ¿/
+Q	cpp:S3471•"/Use "override" or "final" instead of "virtual".(’êÜ—ÿÿÿÿÿ8¨›¾ÿ¿/
+s	cpp:S3490–"VUse "=default" instead of the default implementation of this special member functions.(‚§˜É8°›¾ÿ¿/
+D	cpp:S5817½"'This function should be declared const.(¸ºƒ¬8º›¾ÿ¿/
+I	cpp:S5817Í"'This function should be declared const.(¿×€Èúÿÿÿÿ8½›¾ÿ¿/
+…	cpp:S3624ô"âExplicitly define or delete the missing copy constructor and copy assignment operator so that they will not be implicitly provided. Additionally, you may consider defining the move assignment operator and the move constructor.(áËîŠøÿÿÿÿ8Å›¾ÿ¿/
+k	cpp:S4963ô"IRemove this class' destructor so that the class follows the rule of Zero.(áËîŠøÿÿÿÿ8Å›¾ÿ¿/
+L	cpp:S1709û"/Add the "explicit" keyword to this constructor.(±­ë­8Æ›¾ÿ¿/
+s	cpp:S5025€"QReplace the use of "new" with an operation that automatically manages the memory.(«Æşñÿÿÿÿÿ8È›¾ÿ¿/
+W	cpp:S5025ˆ":Rewrite the code so that you no longer need this "delete".(ı¤ì‡8Ê›¾ÿ¿/
+\	cpp:S5025":Rewrite the code so that you no longer need this "delete".(„É¦üÿÿÿÿ8Ë›¾ÿ¿/
+s	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(«Æşñÿÿÿÿÿ8Õ›¾ÿ¿/
+\	cpp:S5025­":Rewrite the code so that you no longer need this "delete".(„©ñºùÿÿÿÿ8Ú›¾ÿ¿/
+icpp:S134¼"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(‹”œù8õ›¾ÿ¿/
+I	cpp:S5827¯"'Replace the redundant type with "auto".(˜ÙØãûÿÿÿÿ8õ›¾ÿ¿/
+I	cpp:S5827Ë"'Replace the redundant type with "auto".(˜ÙØãûÿÿÿÿ8œ¾ÿ¿/
+Ncpp:S886Ö"2Refactor this loop so that it is less error-prone.(áÚĞ’8’œ¾ÿ¿/
+bcpp:AssignmentInSubExpressionŞ",Extract the assignment from this expression.(·¨İñÿÿÿÿÿ8–œ¾ÿ¿/
+W	cpp:S5025Ÿ":Rewrite the code so that you no longer need this "delete".(Ü³¥œ8£œ¾ÿ¿/
+s	cpp:S5025•"QReplace the use of "new" with an operation that automatically manages the memory.( î´ãşÿÿÿÿ8£œ¾ÿ¿/
+Jcpp:S106œ".Replace this usage of "std::cout" by a logger.(ÃšşÈ8¨œ¾ÿ¿/
+Ocpp:S106 ".Replace this usage of "std::cout" by a logger.(Ñ–ÿÿÿÿÿ8ªœ¾ÿ¿/
+‹	cpp:S3230$"oDo not use the constructor's initializer list for data member "elementi". Use the in-class initializer instead.(÷¦Ê¤8ªœ¾ÿ¿/
+‹	cpp:S3230$"oDo not use the constructor's initializer list for data member "pokNaFun". Use the in-class initializer instead.(÷¦Ê¤8ªœ¾ÿ¿/
+Ccpp:CommentedCodeÙ"Remove the commented out code.(ÈÂúü8¤º¾ÿ¿/

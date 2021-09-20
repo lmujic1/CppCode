@@ -1,0 +1,41 @@
+
+M	cpp:S1117Q"1declaration shadows a field of 'Grana<TipOznake>'(Š½ïå8 ˜¼ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(‚§˜É8Ğ™¼ÿ¿/
+C	cpp:S5817="'This function should be declared const.(¸ºƒ¬8Ø™¼ÿ¿/
+d!cpp:SingleDeclarationPerStatementI"0Define each identifier in a dedicated statement.(ôò•Æ8Ø™¼ÿ¿/
+H	cpp:S5817M"'This function should be declared const.(¿×€Èúÿÿÿÿ8Ú™¼ÿ¿/
+„	cpp:S3624o"âExplicitly define or delete the missing copy constructor and copy assignment operator so that they will not be implicitly provided. Additionally, you may consider defining the move assignment operator and the move constructor.(§‰½×şÿÿÿÿ8á™¼ÿ¿/
+j	cpp:S4963o"IRemove this class' destructor so that the class follows the rule of Zero.(§‰½×şÿÿÿÿ8â™¼ÿ¿/
+E	cpp:S3656r"$Make this member variable "private".(¹é¾¬ûÿÿÿÿ8â™¼ÿ¿/
+E	cpp:S3656s"$Make this member variable "private".(©µ‚ùÿÿÿÿ8â™¼ÿ¿/
+?	cpp:S3656t"$Make this member variable "private".(“ŠÓ-8ã™¼ÿ¿/
+K	cpp:S1709v"/Add the "explicit" keyword to this constructor.(€ˆÖ’8ã™¼ÿ¿/
+r	cpp:S5025{"QReplace the use of "new" with an operation that automatically manages the memory.(‡ó×¤øÿÿÿÿ8æ™¼ÿ¿/
+\	cpp:S5025‚":Rewrite the code so that you no longer need this "delete".(Æ¨Øûúÿÿÿÿ8é™¼ÿ¿/
+\	cpp:S5025‡":Rewrite the code so that you no longer need this "delete".(„É¦üÿÿÿÿ8é™¼ÿ¿/
+?	cpp:S1035’"Throw the exception by value.(šã©–şÿÿÿÿ8í™¼ÿ¿/
+n	cpp:S5025—"QReplace the use of "new" with an operation that automatically manages the memory.(±ç§Š8ï™¼ÿ¿/
+?	cpp:S1035œ"Throw the exception by value.(Ù®°ûÿÿÿÿ8ó™¼ÿ¿/
+n	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(‚‡²ÿ8ó™¼ÿ¿/
+W	cpp:S5025£":Rewrite the code so that you no longer need this "delete".(›ÏÆô8÷™¼ÿ¿/
+9	cpp:S1035¢"Throw the exception by value.(˜¬T8÷™¼ÿ¿/
+9	cpp:S1035©"Throw the exception by value.(˜¬T8ú™¼ÿ¿/
+9	cpp:S1035¯"Throw the exception by value.(˜¬T8ş™¼ÿ¿/
+:	cpp:S1035»"Throw the exception by value.(€ëë8ƒš¼ÿ¿/
+:	cpp:S1035Á"Throw the exception by value.(€ëë8„š¼ÿ¿/
+9	cpp:S1035Ç"Throw the exception by value.(˜¬T8‡š¼ÿ¿/
+9	cpp:S1035Í"Throw the exception by value.(˜¬T8‹š¼ÿ¿/
+9	cpp:S1035Ó"Throw the exception by value.(˜¬T8š¼ÿ¿/
+:	cpp:S1035Ù"Throw the exception by value.(€ëë8’š¼ÿ¿/
+ncpp:S134ì"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(œÄœûÿÿÿÿ8–š¼ÿ¿/
+j!cpp:SingleDeclarationPerStatement‚"0Define each identifier in a dedicated statement.(–‘ÖÀüÿÿÿÿ8¡š¼ÿ¿/
+?	cpp:S1035ˆ"Throw the exception by value.(ôò©üÿÿÿÿ8£š¼ÿ¿/
+e!cpp:SingleDeclarationPerStatement˜"0Define each identifier in a dedicated statement.(ØªùÆ8§š¼ÿ¿/
+:	cpp:S1035•"Throw the exception by value.(ŸÙÚõ8§š¼ÿ¿/
+e!cpp:SingleDeclarationPerStatement±"0Define each identifier in a dedicated statement.(ØªùÆ8®š¼ÿ¿/
+:	cpp:S1035®"Throw the exception by value.(ŸÙÚõ8°š¼ÿ¿/
+hcpp:S134Ö"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(‡˜8¸š¼ÿ¿/
+I	cpp:S5827É"'Replace the redundant type with "auto".(á›ìêûÿÿÿÿ8¹š¼ÿ¿/
+I	cpp:S5827ä"'Replace the redundant type with "auto".(á›ìêûÿÿÿÿ8Ûš¼ÿ¿/
+Ncpp:S886ï"2Refactor this loop so that it is less error-prone.(ÒÀœı8ãš¼ÿ¿/
+bcpp:AssignmentInSubExpressionö",Extract the assignment from this expression.(·¨İñÿÿÿÿÿ8éš¼ÿ¿/

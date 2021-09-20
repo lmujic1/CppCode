@@ -1,0 +1,42 @@
+
+™	cpp:S4963	"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(”Ò˜Åùÿÿÿÿ8í½ÿ¿/
+d!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(ÂÄ‚8Ÿí½ÿ¿/
+c!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(Ò£|8 í½ÿ¿/
+V	cpp:S5025":Rewrite the code so that you no longer need this "delete".(Ùº ø8 í½ÿ¿/
+V	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ö¦Ÿ 8 í½ÿ¿/
+m	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ú¶¾Ø8¡í½ÿ¿/
+V	cpp:S50256":Rewrite the code so that you no longer need this "delete".(ö¦Ÿ 8¢í½ÿ¿/
+m	cpp:S5025:"QReplace the use of "new" with an operation that automatically manages the memory.(ú¶¾Ø8¢í½ÿ¿/
+r	cpp:S5025J"QReplace the use of "new" with an operation that automatically manages the memory.(‡ïıÿÿÿÿ8¤í½ÿ¿/
+r	cpp:S5025N"QReplace the use of "new" with an operation that automatically manages the memory.(ßÁÆâıÿÿÿÿ8¤í½ÿ¿/
+r	cpp:S5025W"QReplace the use of "new" with an operation that automatically manages the memory.(‡ïıÿÿÿÿ8¥í½ÿ¿/
+m	cpp:S5025["QReplace the use of "new" with an operation that automatically manages the memory.(¢¤ú÷8¦í½ÿ¿/
+[	cpp:S5025g":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8¦í½ÿ¿/
+9	cpp:S1035b"Throw the exception by value.(¶ı„8§í½ÿ¿/
+[	cpp:S5025u":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8¨í½ÿ¿/
+9	cpp:S1035q"Throw the exception by value.(¶ı„8¨í½ÿ¿/
+9	cpp:S1035"Throw the exception by value.(¶ı„8©í½ÿ¿/
+:	cpp:S1035„"Throw the exception by value.(¶ı„8ªí½ÿ¿/
+:	cpp:S1035‰"Throw the exception by value.(¶ı„8«í½ÿ¿/
+W	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ö¦Ÿ 8«í½ÿ¿/
+D	cpp:S5817”"'This function should be declared const.(ÁÇ½É8«í½ÿ¿/
+Icpp:S106".Replace this usage of "std::cout" by a logger.(¥­Œf8¸í½ÿ¿/
+Jcpp:S106£".Replace this usage of "std::cout" by a logger.(Å³¼‘8ºí½ÿ¿/
+Icpp:S106¥".Replace this usage of "std::cout" by a logger.(¥­Œf8ºí½ÿ¿/
+Ocpp:S106«".Replace this usage of "std::cout" by a logger.(–¾Ùüÿÿÿÿ8¾í½ÿ¿/
+Jcpp:S106­".Replace this usage of "std::cout" by a logger.(…Ñ£8¾í½ÿ¿/
+Ocpp:S106¯".Replace this usage of "std::cout" by a logger.(×ã¶£ıÿÿÿÿ8¿í½ÿ¿/
+Ocpp:S106¶".Replace this usage of "std::cout" by a logger.(–¾Ùüÿÿÿÿ8Çí½ÿ¿/
+Ocpp:S106º".Replace this usage of "std::cout" by a logger.(×ã¶£ıÿÿÿÿ8Èí½ÿ¿/
+Ocpp:S106Ã".Replace this usage of "std::cout" by a logger.(ˆıŸüÿÿÿÿ8Òí½ÿ¿/
+Icpp:S106Ë".Replace this usage of "std::cout" by a logger.(œ·¬S8Øí½ÿ¿/
+Ocpp:S106Í".Replace this usage of "std::cout" by a logger.(…ô§™ıÿÿÿÿ8Øí½ÿ¿/
+Ocpp:S106Ö".Replace this usage of "std::cout" by a logger.(ÉÀ¦íúÿÿÿÿ8áí½ÿ¿/
+Ocpp:S106Ø".Replace this usage of "std::cout" by a logger.(ÉÀ¦íúÿÿÿÿ8áí½ÿ¿/
+Jcpp:S106Ş".Replace this usage of "std::cout" by a logger.(Ó»ñ8ãí½ÿ¿/
+Icpp:S106ä".Replace this usage of "std::cout" by a logger.(ºŞˆ8äí½ÿ¿/
+Ocpp:S106æ".Replace this usage of "std::cout" by a logger.(ğÃË¹şÿÿÿÿ8åí½ÿ¿/
+Jcpp:S106è".Replace this usage of "std::cout" by a logger.(û–°â8åí½ÿ¿/
+Jcpp:S106ê".Replace this usage of "std::cout" by a logger.(‘ïò©8æí½ÿ¿/
+–	cpp:S3230"uDo not use the constructor's initializer list for data member "broj_elemenata". Use the in-class initializer instead.(Øîâ¦ıÿÿÿÿ8æí½ÿ¿/
+Bcpp:CommentedCodef"Remove the commented out code.(îóï®8ª‹¾ÿ¿/

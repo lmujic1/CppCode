@@ -1,0 +1,117 @@
+
+@	cpp:S1117o"$declaration shadows a local variable(û¹ÎÇ8Âû¹ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(ƒ ñ­8›ı¹ÿ¿/
+r	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(¼ñÑÛ8œı¹ÿ¿/
+™	cpp:S4963"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(™‹ò…ùÿÿÿÿ8 ı¹ÿ¿/
+i!cpp:SingleDeclarationPerStatement "0Define each identifier in a dedicated statement.(ÏÈÍÈùÿÿÿÿ8 ı¹ÿ¿/
+{	cpp:S3230$"_Do not assign data members in a constructor. Initialize member "niz" in an initialization list.(ßÚıø8 ı¹ÿ¿/
+{	cpp:S3230%"_Do not assign data members in a constructor. Initialize member "max" in an initialization list.(È—Ã¶8¡ı¹ÿ¿/
+~	cpp:S3230&"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(Ş€¿ş8¡ı¹ÿ¿/
+€	cpp:S3230'"dDo not assign data members in a constructor. Initialize member "pokNaFun" in an initialization list.(½ªà8¡ı¹ÿ¿/
+m	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ßÚıø8¡ı¹ÿ¿/
+€	cpp:S3230*"_Do not assign data members in a constructor. Initialize member "niz" in an initialization list.(½à›ëøÿÿÿÿ8¡ı¹ÿ¿/
+€	cpp:S3230+"_Do not assign data members in a constructor. Initialize member "max" in an initialization list.(ª¸¼áÿÿÿÿÿ8¢ı¹ÿ¿/
+~	cpp:S3230,"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(ô…‰†8¢ı¹ÿ¿/
+…	cpp:S3230-"dDo not assign data members in a constructor. Initialize member "pokNaFun" in an initialization list.(¼„ç¸ûÿÿÿÿ8¢ı¹ÿ¿/
+r	cpp:S5025*"QReplace the use of "new" with an operation that automatically manages the memory.(½à›ëøÿÿÿÿ8¢ı¹ÿ¿/
+r	cpp:S5025/"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÕıııÿÿÿÿ8£ı¹ÿ¿/
+[	cpp:S5025:":Rewrite the code so that you no longer need this "delete".(á¢ëŠıÿÿÿÿ8¥ı¹ÿ¿/
+[	cpp:S50257":Rewrite the code so that you no longer need this "delete".(àßÑşÿÿÿÿ8§ı¹ÿ¿/
+r	cpp:S5025;"QReplace the use of "new" with an operation that automatically manages the memory.(½à›ëøÿÿÿÿ8¨ı¹ÿ¿/
+r	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÕıııÿÿÿÿ8¨ı¹ÿ¿/
+[	cpp:S5025J":Rewrite the code so that you no longer need this "delete".(á¢ëŠıÿÿÿÿ8©ı¹ÿ¿/
+[	cpp:S5025G":Rewrite the code so that you no longer need this "delete".(àßÑşÿÿÿÿ8©ı¹ÿ¿/
+8	cpp:S1035O"Throw the exception by value.(†©çA8«ı¹ÿ¿/
+mcpp:S134s"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(ü§è½ùÿÿÿÿ8¯ı¹ÿ¿/
+>	cpp:S1035^"Throw the exception by value.(ÿØ„ÿÿÿÿÿ8°ı¹ÿ¿/
+C	cpp:S5827n"'Replace the redundant type with "auto".(â„ã8·ı¹ÿ¿/
+\	cpp:S5025€":Rewrite the code so that you no longer need this "delete".(á¢ëŠıÿÿÿÿ8·ı¹ÿ¿/
+m	cpp:S5025n"QReplace the use of "new" with an operation that automatically manages the memory.(â„ã8·ı¹ÿ¿/
+[	cpp:S5025|":Rewrite the code so that you no longer need this "delete".(àßÑşÿÿÿÿ8¸ı¹ÿ¿/
+m	cpp:S5025u"QReplace the use of "new" with an operation that automatically manages the memory.(ëŒ³í8»ı¹ÿ¿/
+W	cpp:S5025Œ":Rewrite the code so that you no longer need this "delete".(œèª¤8Âı¹ÿ¿/
+n	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(é§Ù˜8Âı¹ÿ¿/
+\	cpp:S5025":Rewrite the code so that you no longer need this "delete".(àßÑşÿÿÿÿ8Åı¹ÿ¿/
+9	cpp:S1035±"Throw the exception by value.(º‰ıZ8Æı¹ÿ¿/
+:	cpp:S1035¤"Throw the exception by value.(ºœèÕ8Æı¹ÿ¿/
+i	cpp:S5205´"MReplace this function pointer with a template parameter or a "std::function".(›¢Ëu8Êı¹ÿ¿/
+N	cpp:S3471E"2Annotate this function with "override" or "final".(¡ô¡8Îı¹ÿ¿/
+S	cpp:S3471N"2Annotate this function with "override" or "final".(„é´ÿÿÿÿÿ8Ïı¹ÿ¿/
+N	cpp:S3471]"2Annotate this function with "override" or "final".(ö÷¥8Ôı¹ÿ¿/
+T	cpp:S3471—"2Annotate this function with "override" or "final".(¤³óÁüÿÿÿÿ8ãı¹ÿ¿/
+T	cpp:S3471›"2Annotate this function with "override" or "final".(ëƒ¥©ıÿÿÿÿ8äı¹ÿ¿/
+O	cpp:S3471£"2Annotate this function with "override" or "final".(–å²8åı¹ÿ¿/
+j!cpp:SingleDeclarationPerStatementÀ"0Define each identifier in a dedicated statement.(ÅŠ‘Õÿÿÿÿÿ8êı¹ÿ¿/
+„	cpp:S3230Â"bDo not assign data members in a constructor. Initialize member "lijevo" in an initialization list.(§ùì„ùÿÿÿÿ8êı¹ÿ¿/
+ƒ	cpp:S3230Ã"aDo not assign data members in a constructor. Initialize member "desno" in an initialization list.(Çİñÿÿÿÿÿ8ëı¹ÿ¿/
+	cpp:S3230Ä"dDo not assign data members in a constructor. Initialize member "roditelj" in an initialization list.(©¸Æê8ëı¹ÿ¿/
+ƒ	cpp:S3230Ç"aDo not assign data members in a constructor. Initialize member "kljuc" in an initialization list.(ÂÃ¶Ìúÿÿÿÿ8ëı¹ÿ¿/
+ˆ	cpp:S3230È"fDo not assign data members in a constructor. Initialize member "vrijednost" in an initialization list.(—šì½ÿÿÿÿÿ8ëı¹ÿ¿/
+	cpp:S3230É"bDo not assign data members in a constructor. Initialize member "lijevo" in an initialization list.(¤ˆÃ¢8ìı¹ÿ¿/
+ƒ	cpp:S3230Ê"aDo not assign data members in a constructor. Initialize member "desno" in an initialization list.(Œ¸ÖÆıÿÿÿÿ8ìı¹ÿ¿/
+†	cpp:S3230Ë"dDo not assign data members in a constructor. Initialize member "roditelj" in an initialization list.(åò±™ûÿÿÿÿ8ìı¹ÿ¿/
+•	cpp:S4963Ñ"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(ô‡–¿8òı¹ÿ¿/
+\	cpp:S5025Ø":Rewrite the code so that you no longer need this "delete".(“€ªèüÿÿÿÿ8óı¹ÿ¿/
+€	cpp:S3230Ş"cDo not assign data members in a constructor. Initialize member "korijen" in an initialization list.(• ¨Ì8ôı¹ÿ¿/
+€	cpp:S3230â"cDo not assign data members in a constructor. Initialize member "korijen" in an initialization list.(• ¨Ì8ôı¹ÿ¿/
+D	cpp:S5827è"'Replace the redundant type with "auto".(äÎË‡8öı¹ÿ¿/
+n	cpp:S5025è"QReplace the use of "new" with an operation that automatically manages the memory.(äÎË‡8öı¹ÿ¿/
+e!cpp:SingleDeclarationPerStatement„"0Define each identifier in a dedicated statement.(æ…ÎÖ8üı¹ÿ¿/
+D	cpp:S5827¡"'Replace the redundant type with "auto".(Ğ£ÏÖ8€ş¹ÿ¿/
+n	cpp:S5025¡"QReplace the use of "new" with an operation that automatically manages the memory.(Ğ£ÏÖ8ƒş¹ÿ¿/
+j!cpp:SingleDeclarationPerStatement·"0Define each identifier in a dedicated statement.(–¯û şÿÿÿÿ8‰ş¹ÿ¿/
+j!cpp:SingleDeclarationPerStatement¸"0Define each identifier in a dedicated statement.(Ú£À´üÿÿÿÿ8‰ş¹ÿ¿/
+\	cpp:S5025Ú":Rewrite the code so that you no longer need this "delete".(ÍµÙ±ıÿÿÿÿ8Šş¹ÿ¿/
+:	cpp:S1035¾"Throw the exception by value.(©Æ±Â8Œş¹ÿ¿/
+O	cpp:S3471ÿ"2Annotate this function with "override" or "final".(ïÎê®8“ş¹ÿ¿/
+<	cpp:S4962Š"Use the "nullptr" literal.(–Œÿ‹ıÿÿÿÿ8•ş¹ÿ¿/
+O	cpp:S3471š"2Annotate this function with "override" or "final".(ö÷¥8–ş¹ÿ¿/
+T	cpp:S3471¥"2Annotate this function with "override" or "final".(„é´ÿÿÿÿÿ8™ş¹ÿ¿/
+T	cpp:S3471¯"2Annotate this function with "override" or "final".(¤³óÁüÿÿÿÿ8œş¹ÿ¿/
+T	cpp:S3471²"2Annotate this function with "override" or "final".(ëƒ¥©ıÿÿÿÿ8œş¹ÿ¿/
+O	cpp:S3471¶"2Annotate this function with "override" or "final".(–å²8œş¹ÿ¿/
+•	cpp:S4963á"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(·±“ÿ8¤ş¹ÿ¿/
+…	cpp:S3230è"cDo not assign data members in a constructor. Initialize member "nizMapa" in an initialization list.(ªßÅûÿÿÿÿ8¤ş¹ÿ¿/
+‚	cpp:S3230é"eDo not assign data members in a constructor. Initialize member "maxBrojEl" in an initialization list.(˜é³Ø8¥ş¹ÿ¿/
+	cpp:S3230ê"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(Ş€¿ş8¥ş¹ÿ¿/
+s	cpp:S5025è"QReplace the use of "new" with an operation that automatically manages the memory.(ªßÅûÿÿÿÿ8¥ş¹ÿ¿/
+W	cpp:S5025î":Rewrite the code so that you no longer need this "delete".(­¨¸Í8¥ş¹ÿ¿/
+‚	cpp:S3230ò"eDo not assign data members in a constructor. Initialize member "maxBrojEl" in an initialization list.(“ñ™è8¦ş¹ÿ¿/
+„	cpp:S3230ó"bDo not assign data members in a constructor. Initialize member "brojEl" in an initialization list.(À—Ğüÿÿÿÿ8¦ş¹ÿ¿/
+€	cpp:S3230ô"cDo not assign data members in a constructor. Initialize member "nizMapa" in an initialization list.(£¿ñ´8¦ş¹ÿ¿/
+n	cpp:S5025ô"QReplace the use of "new" with an operation that automatically manages the memory.(£¿ñ´8§ş¹ÿ¿/
+W	cpp:S5025ü":Rewrite the code so that you no longer need this "delete".(­¨¸Í8©ş¹ÿ¿/
+n	cpp:S5025ı"QReplace the use of "new" with an operation that automatically manages the memory.(£¿ñ´8ªş¹ÿ¿/
+D	cpp:S5827Œ"'Replace the redundant type with "auto".(ªä’€8®ş¹ÿ¿/
+W	cpp:S5025":Rewrite the code so that you no longer need this "delete".(­¨¸Í8®ş¹ÿ¿/
+n	cpp:S5025Œ"QReplace the use of "new" with an operation that automatically manages the memory.(ªä’€8®ş¹ÿ¿/
+?	cpp:S1035¯"Throw the exception by value.(Í ƒÕúÿÿÿÿ8¶ş¹ÿ¿/
+O	cpp:S3471í"2Annotate this function with "override" or "final".(Ãô« 8¸ş¹ÿ¿/
+T	cpp:S3471‚"2Annotate this function with "override" or "final".(¤³óÁüÿÿÿÿ8¸ş¹ÿ¿/
+O	cpp:S3471†"2Annotate this function with "override" or "final".(ö÷¥8¹ş¹ÿ¿/
+T	cpp:S3471œ"2Annotate this function with "override" or "final".(„é´ÿÿÿÿÿ8½ş¹ÿ¿/
+T	cpp:S3471£"2Annotate this function with "override" or "final".(ëƒ¥©ıÿÿÿÿ8¾ş¹ÿ¿/
+O	cpp:S3471¦"2Annotate this function with "override" or "final".(–å²8¿ş¹ÿ¿/
+L	cpp:S5020¹"/Replace "rand" with the facilities in <random>.(Æ‰Ü‘8Íş¹ÿ¿/
+L	cpp:S5020Ä"/Replace "rand" with the facilities in <random>.(Æ‰Ü‘8Ñş¹ÿ¿/
+L	cpp:S5020Ğ"/Replace "rand" with the facilities in <random>.(Æ‰Ü‘8Ôş¹ÿ¿/
+j!cpp:SingleDeclarationPerStatementâ"0Define each identifier in a dedicated statement.(Í¿õúûÿÿÿÿ8Øş¹ÿ¿/
+j!cpp:SingleDeclarationPerStatementã"0Define each identifier in a dedicated statement.(¬—Ûëøÿÿÿÿ8Ùş¹ÿ¿/
+Ocpp:S106ì".Replace this usage of "std::cout" by a logger.(¿›Ì÷ÿÿÿÿÿ8Şş¹ÿ¿/
+Icpp:S106ñ".Replace this usage of "std::cout" by a logger.(–’Œ^8ßş¹ÿ¿/
+Jcpp:S106ö".Replace this usage of "std::cout" by a logger.(ÿ©Ú8áş¹ÿ¿/
+Icpp:S106ü".Replace this usage of "std::cout" by a logger.(ëÀ8âş¹ÿ¿/
+Jcpp:S106".Replace this usage of "std::cout" by a logger.(ŸÁ©ä8ãş¹ÿ¿/
+Jcpp:S106†".Replace this usage of "std::cout" by a logger.(®ıàĞ8åş¹ÿ¿/
+?	cpp:S1854è""Value stored to 'v1' is never read(ïĞ¦Õ8„ƒ¼ÿ¿/
+D	cpp:S1854ê""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8„ƒ¼ÿ¿/
+?	cpp:S1854í""Value stored to 'v1' is never read(ïĞ¦Õ8„ƒ¼ÿ¿/
+D	cpp:S1854ï""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8…ƒ¼ÿ¿/
+?	cpp:S1854ò""Value stored to 'v1' is never read(ïĞ¦Õ8…ƒ¼ÿ¿/
+D	cpp:S1854ô""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8…ƒ¼ÿ¿/
+?	cpp:S1854ø""Value stored to 'v1' is never read(ïĞ¦Õ8…ƒ¼ÿ¿/
+D	cpp:S1854ú""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8…ƒ¼ÿ¿/
+?	cpp:S1854ı""Value stored to 'v1' is never read(ïĞ¦Õ8…ƒ¼ÿ¿/
+D	cpp:S1854ÿ""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8†ƒ¼ÿ¿/
+?	cpp:S1854‚""Value stored to 'v1' is never read(ïĞ¦Õ8†ƒ¼ÿ¿/
+D	cpp:S1854„""Value stored to 'v2' is never read(ïŠĞÂúÿÿÿÿ8†ƒ¼ÿ¿/

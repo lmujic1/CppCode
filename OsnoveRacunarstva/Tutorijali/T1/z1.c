@@ -19,6 +19,7 @@ int main()
 
     // Ispis na monitoru
     printf(“\n Povrsina kruga sa poluprecnikom %  2f je %.2f”, R,P);
+
     printf(“\n Zapremina kugle sa poluprecnikom %2f je %.2f”, R,V);
     return 0;
 }

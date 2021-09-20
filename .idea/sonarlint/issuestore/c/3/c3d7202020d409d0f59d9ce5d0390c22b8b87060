@@ -1,0 +1,59 @@
+
+a	cpp:S3229("@field 'krajnji' will be initialized after field 'broj_elemenata'(âÁ¶Íúÿÿÿÿ8¬°¼ÿ¿/
+w	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(°š¸şÿÿÿÿ8ú°¼ÿ¿/
+w	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(ìÇÛ¾ûÿÿÿÿ8û°¼ÿ¿/
+™	cpp:S4963"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(“òçÿüÿÿÿÿ8±¼ÿ¿/
+i!cpp:SingleDeclarationPerStatement&"0Define each identifier in a dedicated statement.(‚í«ßûÿÿÿÿ8‚±¼ÿ¿/
+d!cpp:SingleDeclarationPerStatement#"0Define each identifier in a dedicated statement.(¥¸é8‚±¼ÿ¿/
+[	cpp:S50250":Rewrite the code so that you no longer need this "delete".(ÅØ¸óúÿÿÿÿ8ƒ±¼ÿ¿/
+‹	cpp:S32305"jDo not assign data members in a constructor. Initialize member "broj_elemenata" in an initialization list.(íá¹ùşÿÿÿÿ8„±¼ÿ¿/
+i!cpp:SingleDeclarationPerStatement6"0Define each identifier in a dedicated statement.(íê¨êşÿÿÿÿ8„±¼ÿ¿/
+r	cpp:S50258"QReplace the use of "new" with an operation that automatically manages the memory.(±‰—¾úÿÿÿÿ8…±¼ÿ¿/
+i!cpp:SingleDeclarationPerStatementP"0Define each identifier in a dedicated statement.(íê¨êşÿÿÿÿ8‡±¼ÿ¿/
+[	cpp:S5025M":Rewrite the code so that you no longer need this "delete".(ÅØ¸óúÿÿÿÿ8ˆ±¼ÿ¿/
+r	cpp:S5025R"QReplace the use of "new" with an operation that automatically manages the memory.(±‰—¾úÿÿÿÿ8‰±¼ÿ¿/
+>	cpp:S1035f"Throw the exception by value.(¡ˆü÷ıÿÿÿÿ8Œ±¼ÿ¿/
+>	cpp:S1035o"Throw the exception by value.(¡ˆü÷ıÿÿÿÿ8±¼ÿ¿/
+>	cpp:S1035x"Throw the exception by value.(…éŒˆşÿÿÿÿ8±¼ÿ¿/
+>	cpp:S1035}"Throw the exception by value.(…éŒˆşÿÿÿÿ8‘±¼ÿ¿/
+?	cpp:S1035‚"Throw the exception by value.(…éŒˆşÿÿÿÿ8‘±¼ÿ¿/
+?	cpp:S1035‰"Throw the exception by value.(…éŒˆşÿÿÿÿ8’±¼ÿ¿/
+?	cpp:S1035˜"Throw the exception by value.(…éŒˆşÿÿÿÿ8”±¼ÿ¿/
+\	cpp:S5025":Rewrite the code so that you no longer need this "delete".(¦Äıÿÿÿÿ8•±¼ÿ¿/
+\	cpp:S5025£":Rewrite the code so that you no longer need this "delete".(ÅØ¸óúÿÿÿÿ8•±¼ÿ¿/
+s	cpp:S5025¯"QReplace the use of "new" with an operation that automatically manages the memory.(‡ïıÿÿÿÿ8—±¼ÿ¿/
+s	cpp:S5025´"QReplace the use of "new" with an operation that automatically manages the memory.(™øûøÿÿÿÿ8˜±¼ÿ¿/
+n	cpp:S5025¹"QReplace the use of "new" with an operation that automatically manages the memory.(èñ¶8™±¼ÿ¿/
+s	cpp:S5025Â"QReplace the use of "new" with an operation that automatically manages the memory.(‡ïıÿÿÿÿ8›±¼ÿ¿/
+m	cpp:S5025È"QReplace the use of "new" with an operation that automatically manages the memory.(¹Î´%8œ±¼ÿ¿/
+S	cpp:S3471)"2Annotate this function with "override" or "final".(üÓÁõşÿÿÿÿ8±¼ÿ¿/
+Q	cpp:S1709å"/Add the "explicit" keyword to this constructor.(Ç«ã™şÿÿÿÿ8±±¼ÿ¿/
+Icpp:S106„".Replace this usage of "std::cout" by a logger.(¥­Œf8´±¼ÿ¿/
+Jcpp:S106‹".Replace this usage of "std::cout" by a logger.(®ø‡Ô8·±¼ÿ¿/
+Jcpp:S106".Replace this usage of "std::cout" by a logger.(®ø‡Ô8·±¼ÿ¿/
+Jcpp:S106".Replace this usage of "std::cout" by a logger.(®ø‡Ô8¸±¼ÿ¿/
+Jcpp:S106’".Replace this usage of "std::cout" by a logger.(æùØ8¸±¼ÿ¿/
+Jcpp:S106™".Replace this usage of "std::cout" by a logger.(æùØ8¾±¼ÿ¿/
+Jcpp:S106›".Replace this usage of "std::cout" by a logger.(ˆ‹Ù„8¾±¼ÿ¿/
+Jcpp:S106¢".Replace this usage of "std::cout" by a logger.(Å³¼‘8Â±¼ÿ¿/
+Ocpp:S106¦".Replace this usage of "std::cout" by a logger.(À‹êàúÿÿÿÿ8Â±¼ÿ¿/
+Icpp:S106¬".Replace this usage of "std::cout" by a logger.(¥­Œf8Æ±¼ÿ¿/
+Icpp:S106±".Replace this usage of "std::cout" by a logger.(¥­Œf8Ç±¼ÿ¿/
+Ocpp:S106Â".Replace this usage of "std::cout" by a logger.(ÜÓáÚøÿÿÿÿ8Ğ±¼ÿ¿/
+Jcpp:S106Ã".Replace this usage of "std::cout" by a logger.(½éÆ8Ñ±¼ÿ¿/
+Ocpp:S106Å".Replace this usage of "std::cout" by a logger.(‘‘ïùÿÿÿÿ8Ñ±¼ÿ¿/
+Icpp:S106Ì".Replace this usage of "std::cout" by a logger.(ÔßÇF8Ş±¼ÿ¿/
+Jcpp:S106Î".Replace this usage of "std::cout" by a logger.(û–°â8ß±¼ÿ¿/
+Ocpp:S106Ğ".Replace this usage of "std::cout" by a logger.(ÔŸØÛøÿÿÿÿ8à±¼ÿ¿/
+Ocpp:S106Ñ".Replace this usage of "std::cout" by a logger.(ğÃË¹şÿÿÿÿ8á±¼ÿ¿/
+Ocpp:S106Ó".Replace this usage of "std::cout" by a logger.(ÔŸØÛøÿÿÿÿ8ã±¼ÿ¿/
+Ocpp:S106Ô".Replace this usage of "std::cout" by a logger.(ÉÀ¦íúÿÿÿÿ8ä±¼ÿ¿/
+Jcpp:S106Ö".Replace this usage of "std::cout" by a logger.(ÔÑ”8ä±¼ÿ¿/
+Jcpp:S106Ø".Replace this usage of "std::cout" by a logger.(Ó»ñ8å±¼ÿ¿/
+Icpp:S106Ú".Replace this usage of "std::cout" by a logger.(ºŞˆ8æ±¼ÿ¿/
+Jcpp:S106Ü".Replace this usage of "std::cout" by a logger.(¿ğÌÄ8ç±¼ÿ¿/
+	cpp:S3230("mDo not use the constructor's initializer list for data member "tekuci". Use the in-class initializer instead.(âÁ¶Íúÿÿÿÿ8ç±¼ÿ¿/
+	cpp:S3230("nDo not use the constructor's initializer list for data member "krajnji". Use the in-class initializer instead.(âÁ¶Íúÿÿÿÿ8ç±¼ÿ¿/
+	cpp:S3230("nDo not use the constructor's initializer list for data member "pocetni". Use the in-class initializer instead.(âÁ¶Íúÿÿÿÿ8ç±¼ÿ¿/
+–	cpp:S3230("uDo not use the constructor's initializer list for data member "broj_elemenata". Use the in-class initializer instead.(âÁ¶Íúÿÿÿÿ8ç±¼ÿ¿/
+Ccpp:CommentedCode¢"Remove the commented out code.(êŞ†8‚à¼ÿ¿/

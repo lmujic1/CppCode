@@ -1,0 +1,54 @@
+
+Gcpp:CommentedCodeq"Remove the commented out code.(ˆ€¥Ãüÿÿÿÿ8ÃÌµÿ¿/
+Gcpp:CommentedCodeu"Remove the commented out code.(˜šÖ§üÿÿÿÿ8ÄÌµÿ¿/
+Gcpp:CommentedCode|"Remove the commented out code.(˜šÖ§üÿÿÿÿ8ÅÌµÿ¿/
+Ccpp:CommentedCodeƒ"Remove the commented out code.(Á—õÃ8ÅÌµÿ¿/
+Ccpp:CommentedCodeˆ"Remove the commented out code.(…·Ÿé8ÆÌµÿ¿/
+Hcpp:CommentedCodeŒ"Remove the commented out code.(Å»€úÿÿÿÿ8ÆÌµÿ¿/
+Ccpp:CommentedCodeÖ"Remove the commented out code.(¼Â±†8ÇÌµÿ¿/
+_cpp:S935ô">non-void function does not return a value in all control paths(æÀö€øÿÿÿÿ8ÓÍµÿ¿/
+l	cpp:S5276ø"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(èË»âÿÿÿÿÿ8ÓÍµÿ¿/
+l	cpp:S5276ù"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(¬õõûÿÿÿÿ8ÔÍµÿ¿/
+l	cpp:S5276ş"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(Ğ¥Åæüÿÿÿÿ8ÔÍµÿ¿/
+f	cpp:S5276ÿ"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(–Ğàf8ÔÍµÿ¿/
+\	cpp:S3229å"@field 'pocetni' will be initialized after field 'broj_elemenata'(¸¿ös8ÕÍµÿ¿/
+™	cpp:S4963"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(æ¨ÛÕıÿÿÿÿ8ÜÍµÿ¿/
+d!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(ÂÄ‚8İÍµÿ¿/
+V	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ö¦Ÿ 8ŞÍµÿ¿/
+r	cpp:S5025""QReplace the use of "new" with an operation that automatically manages the memory.(øÜÕÒşÿÿÿÿ8ßÍµÿ¿/
+V	cpp:S50250":Rewrite the code so that you no longer need this "delete".(ö¦Ÿ 8àÍµÿ¿/
+r	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(øÜÕÒşÿÿÿÿ8áÍµÿ¿/
+>	cpp:S1035?"Throw the exception by value.(£ŞÍÿÿÿÿÿ8âÍµÿ¿/
+[	cpp:S5025D":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8ãÍµÿ¿/
+r	cpp:S5025M"QReplace the use of "new" with an operation that automatically manages the memory.(Úî‰‚ùÿÿÿÿ8æÍµÿ¿/
+r	cpp:S5025R"QReplace the use of "new" with an operation that automatically manages the memory.(Úî‰‚ùÿÿÿÿ8çÍµÿ¿/
+[	cpp:S5025^":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8çÍµÿ¿/
+>	cpp:S1035Z"Throw the exception by value.(£ŞÍÿÿÿÿÿ8èÍµÿ¿/
+>	cpp:S1035d"Throw the exception by value.(£ŞÍÿÿÿÿÿ8éÍµÿ¿/
+C	cpp:S5817g"'This function should be declared const.(ÁÇ½É8éÍµÿ¿/
+Q	cpp:S1709œ"/Add the "explicit" keyword to this constructor.(ÄÂïùÿÿÿÿ8ôÍµÿ¿/
+•	cpp:S4963Û"xRemove this class' destructor, copy constructor and copy assignment operator so that the class follows the rule of Zero.(‘ª¦ø8ıÍµÿ¿/
+\	cpp:S5025ë":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8şÍµÿ¿/
+d!cpp:SingleDeclarationPerStatementï"0Define each identifier in a dedicated statement.(ˆŸ–:8ÿÍµÿ¿/
+s	cpp:S5025ñ"QReplace the use of "new" with an operation that automatically manages the memory.(æÇï—ûÿÿÿÿ8€Îµÿ¿/
+d!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(ˆŸ–:8‚Îµÿ¿/
+\	cpp:S5025ÿ":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8‚Îµÿ¿/
+s	cpp:S5025ƒ"QReplace the use of "new" with an operation that automatically manages the memory.(æÇï—ûÿÿÿÿ8ƒÎµÿ¿/
+\	cpp:S5025’":Rewrite the code so that you no longer need this "delete".(«×ßùøÿÿÿÿ8„Îµÿ¿/
+n	cpp:S5025™"QReplace the use of "new" with an operation that automatically manages the memory.(ªÏ°8†Îµÿ¿/
+\	cpp:S5025¢":Rewrite the code so that you no longer need this "delete".(ˆƒ¸¢ıÿÿÿÿ8†Îµÿ¿/
+d!cpp:SingleDeclarationPerStatement»"0Define each identifier in a dedicated statement.(ÿÎö_8“Îµÿ¿/
+j!cpp:SingleDeclarationPerStatementÁ"0Define each identifier in a dedicated statement.(×õ÷äûÿÿÿÿ8”Îµÿ¿/
+N	cpp:S1066Ë"1Merge this "if" statement with the enclosing one.(¦ÂÎ8˜Îµÿ¿/
+e!cpp:SingleDeclarationPerStatementú"0Define each identifier in a dedicated statement.(èïÓ 8²Îµÿ¿/
+`	cpp:S6004—"CUse the init-statement to declare "saReda" inside the if statement.(•Âî¥8¾Îµÿ¿/
+`	cpp:S6004¨"CUse the init-statement to declare "saReda" inside the if statement.(•Âî¥8ÂÎµÿ¿/
+Jcpp:S106Ë".Replace this usage of "std::cout" by a logger.(åŒ¿Ş8ÊÎµÿ¿/
+Jcpp:S106Í".Replace this usage of "std::cout" by a logger.(¨çÙÇ8ÊÎµÿ¿/
+Ocpp:S106Ï".Replace this usage of "std::cout" by a logger.(ùå½’ùÿÿÿÿ8ËÎµÿ¿/
+Ocpp:S106Õ".Replace this usage of "std::cout" by a logger.(ä÷š¼şÿÿÿÿ8ÌÎµÿ¿/
+	cpp:S3230œ"mDo not use the constructor's initializer list for data member "tekuci". Use the in-class initializer instead.(ÄÂïùÿÿÿÿ8ÌÎµÿ¿/
+‘	cpp:S3230å"uDo not use the constructor's initializer list for data member "broj_elemenata". Use the in-class initializer instead.(¸¿ös8ÌÎµÿ¿/
+‘	cpp:S3230"uDo not use the constructor's initializer list for data member "broj_elemenata". Use the in-class initializer instead.(ãØ¡Á8ÍÎµÿ¿/
+Š	cpp:S3230å"nDo not use the constructor's initializer list for data member "pocetni". Use the in-class initializer instead.(¸¿ös8ÍÎµÿ¿/
+Ccpp:CommentedCodeÈ"Remove the commented out code.(Á®¬š8Í”¶ÿ¿/

@@ -1,6 +1,7 @@
-a#include <stdio.h>
+#include <stdio.h>
 #define BR_EL 10
 int main() {
+    int f;
     int niz[BR_EL], suma=0,i;
     float prosjek;
     for(i=0;i<BR_EL;i++) {

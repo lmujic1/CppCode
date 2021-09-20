@@ -1,0 +1,17 @@
+
+¦	cpp:S5276"‰implicit conversion turns floating-point number into integer: 'typename __gnu_cxx::__promote_2<int, int>::__type' (aka 'double') to 'int'(ÜëÉÂ8ö©½ÿ¿/
+Š	cpp:S52762"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(Ûà¿ýýÿÿÿÿ8÷©½ÿ¿/
+Š	cpp:S52763"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(çÛåÇÿÿÿÿÿ8÷©½ÿ¿/
+Š	cpp:S5276R"iimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long long') to 'int'(Ûà¿ýýÿÿÿÿ8÷©½ÿ¿/
+f	cpp:S5276S"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(…ø¤ß8ø©½ÿ¿/
+d	cpp:S5566"CChange this raw for-loop to a range for-loop or an "std::for_each".(¢µ¾Ùüÿÿÿÿ8ý«½ÿ¿/
+_	cpp:S5566"CChange this raw for-loop to a range for-loop or an "std::for_each".(ïÿ®Ò8…¬½ÿ¿/
+d	cpp:S5566"CChange this raw for-loop to a range for-loop or an "std::for_each".(©¬¹‡ýÿÿÿÿ8ˆ¬½ÿ¿/
+d	cpp:S5566"CChange this raw for-loop to a range for-loop or an "std::for_each".(ºŒµñüÿÿÿÿ8Š¬½ÿ¿/
+d	cpp:S5566 "CChange this raw for-loop to a range for-loop or an "std::for_each".(½Ÿšøûÿÿÿÿ8“¬½ÿ¿/
+[	cpp:S6004("?Use the init-statement to declare "dd" inside the if statement.(ôé¿”8œ¬½ÿ¿/
+>	cpp:S1035@"Throw the exception by value.(ø±àÅøÿÿÿÿ8²¬½ÿ¿/
+\	cpp:S1155G";Use empty() to check whether the container is empty or not.(‘Ãì¸ýÿÿÿÿ8´¬½ÿ¿/
+>	cpp:S1035G"Throw the exception by value.(‘Ãì¸ýÿÿÿÿ8µ¬½ÿ¿/
+Icpp:S106_".Replace this usage of "std::cout" by a logger.(öóýÌ8Æ¬½ÿ¿/
+Gcpp:CommentedCode&"Remove the commented out code.(¼Ç³®ûÿÿÿÿ8Êß½ÿ¿/
