@@ -44,7 +44,7 @@ jobs:
            BUILD_WRAPPER_DOWNLOAD_URL: ${{ env.SONAR_SERVER_URL }}/static/cpp/build-wrapper-win-x86.zip
         run: |
           curl -sSLo $HOME\.sonar\build-wrapper.zip ${{ env.BUILD_WRAPPER_DOWNLOAD_URL }} 
-          unzip -o $HOME\.sonar\build-wrapper.zip -d $HOME\.sonar\
+          unzip -o $HOME\.sonar\build-wrapper.zip -d $HOME\.sonar\ 
           echo "$HOME\.sonar\build-wrapper-win-x86" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
       - name: Run build-wrapper
         run: |
